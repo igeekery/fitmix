@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">乐享动</string>
+    <string name="try_out">Or 马上试用GO&#8230;!</string>
+    <string name="login">登录</string>
+    <string name="registe">注册</string>
+    <string name="logo">logo</string>
+    <string name="qq">QQ</string>
+    <string name="weibo">微博</string>
+    <string name="wechat">微信</string>
+    <string name="email_login_login">登录</string>
+    <string name="email_login_forgot_password">忘记密码</string>
+	<string name="email_login_done">完成</string>
+    <string name="email_registe">注册</string>
+    <string name="email_registe_next">下一步</string>
+	
+	<string name="rsp_error_user_exist">用户名已经存在</string>	
+	<string name="rsp_error_password_length_error">密码长度不少于6</string>
+	<string name="rsp_error_email_error">邮箱格式错误</string>
+	<string name="rsp_error_login_error">不正确的用用户名或密码</string>
+	
+    <string name="personinfo_settings">个人信息设置</string>
+    <string name="personinfo_sex">性别</string>
+    <string name="personinfo_age">年龄</string>
+    <string name="personinfo_height">身高</string>
+    <string name="personinfo_weight">体重</string>
+    <string name="personinfo_unit">单位</string>
+    <string name="personinfo_male">男</string>
+    <string name="personinfo_female">女</string>
+    <string name="personinfo_next">下一步</string>
+    <string name="personinfo_unit_chinese">kg/cm</string>
+    <string name="personinfo_unit_english">lb/in</string>
+    <string name="personinfo_pen">info</string>
+    <string name="other_setting">位置与提醒</string>
+    <string name="other_setting_tip">我们需要你的位置检查和通知到您</string>
+    <string name="other_setting_location">允许访问位置信息</string>
+    <string name="other_setting_notification">允许消息提醒</string>
+    <string name="other_setting_trail">允许记录位置信息</string>
+    <string name="other_setting_finish">完成</string>
+    <string name="music_run">跑步</string>
+    <string name="music_ride">骑行</string>
+    <string name="music_swim">游泳</string>
+    <string name="music_more">显示全部</string>
+    <string name="music_title">Mix</string>
+    <string name="music_my">我的</string>
+    <string name="music_community">圈子</string>
+    <string name="music_search">搜索</string>
+    <string name="music_exercise">运动</string>
+    <string name="music_school">流派</string>
+    <string name="forgot_password_email_tip">请输入您注册的邮箱</string>
+    <string name="forgot_password_submit">提交</string>
+    <string name="forgot_password_tip">提醒</string>
+    <string name="forgot_password_message">您的新密码已发送至您的邮箱</string>
+    <string name="forgot_password_ok">确定</string>
+
+</resources>

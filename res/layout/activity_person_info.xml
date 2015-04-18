@@ -1,0 +1,245 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/person_info_logo_top_margin"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/person_info_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/person_info_bottom_margin"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/person_info_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_tip_weight"
+                    android:gravity="center"
+                    android:text="@string/personinfo_sex"
+                    android:textColor="@color/person_info_text_tip_color"
+                    android:textSize="@dimen/person_info_tip_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/person_info_space_weight" />
+
+                <Switch
+                    android:id="@+id/person_info_sex"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_switch_weight"
+                    android:textColor="@color/switch_text_color"
+                    android:textOff="@string/personinfo_male"
+                    android:textOn="@string/personinfo_female"
+                    android:textSize="@dimen/switch_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/person_info_item_space" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/person_info_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_tip_weight"
+                    android:gravity="center"
+                    android:text="@string/personinfo_age"
+                    android:textColor="@color/person_info_text_tip_color"
+                    android:textSize="@dimen/person_info_tip_text_size" />
+
+                <EditText
+                    android:id="@+id/person_info_age"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/person_info_edit_weight"
+                    android:background="@android:color/transparent"
+                    android:gravity="right|center_vertical"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/person_info_edit_padding_left"
+                    android:paddingRight="@dimen/person_info_edit_padding_right"
+                    android:textColor="@color/person_info_text_edit_color"
+                    android:textSize="@dimen/person_info_edit_text_size" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_pen_weight"
+                    android:src="@drawable/person_info_pen" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/person_info_item_space" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/person_info_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_tip_weight"
+                    android:gravity="center"
+                    android:text="@string/personinfo_height"
+                    android:textColor="@color/person_info_text_tip_color"
+                    android:textSize="@dimen/person_info_tip_text_size" />
+
+                <EditText
+                    android:id="@+id/person_info_height"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/person_info_edit_weight"
+                    android:background="@android:color/transparent"
+                    android:gravity="right|center_vertical"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/person_info_edit_padding_left"
+                    android:paddingRight="@dimen/person_info_edit_padding_right"
+                    android:textColor="@color/person_info_text_edit_color"
+                    android:textSize="@dimen/person_info_edit_text_size" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_pen_weight"
+                    android:src="@drawable/person_info_pen" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/person_info_item_space" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/person_info_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_tip_weight"
+                    android:gravity="center"
+                    android:text="@string/personinfo_weight"
+                    android:textColor="@color/person_info_text_tip_color"
+                    android:textSize="@dimen/person_info_tip_text_size" />
+
+                <EditText
+                    android:id="@+id/person_info_weight"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/person_info_edit_weight"
+                    android:background="@android:color/transparent"
+                    android:gravity="right|center_vertical"
+                    android:inputType="number"
+                    android:paddingLeft="@dimen/person_info_edit_padding_left"
+                    android:paddingRight="@dimen/person_info_edit_padding_right"
+                    android:textColor="@color/person_info_text_edit_color"
+                    android:textSize="@dimen/person_info_edit_text_size" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_pen_weight"
+                    android:src="@drawable/person_info_pen" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/person_info_item_space" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/person_info_item_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_tip_weight"
+                    android:gravity="center"
+                    android:text="@string/personinfo_unit"
+                    android:textColor="@color/person_info_text_tip_color"
+                    android:textSize="@dimen/person_info_tip_text_size" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/person_info_space_weight" />
+
+                <Switch
+                    android:id="@+id/person_info_unit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="@integer/person_info_switch_weight"
+                    android:textColor="@color/switch_text_color"
+                    android:textOff="@string/personinfo_unit_chinese"
+                    android:textOn="@string/personinfo_unit_english"
+                    android:textSize="@dimen/switch_text_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/person_info_next_bottom_margin"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/person_info_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/step_btn_background"
+                android:onClick="myClickHandler"
+                android:text="@string/personinfo_next"
+                android:textColor="@drawable/btn_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

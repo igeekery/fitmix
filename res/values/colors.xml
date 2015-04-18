@@ -1,0 +1,16 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="btn1_text_down">#FF0000FF</color>
+    <color name="btn1_text_up">#FFFF901E</color>
+    <color name="btn2_text_up">#FFFFFFFF</color>
+    <color name="btn2_text_down">#FF0000FF</color>
+    <color name="error_text_bg_color">#FFFF0000</color>
+    <color name="error_text_fg_color">#FFFFFFFF</color>
+    <color name="edit_text_color">#FFFFFFFF</color>
+    <color name="person_info_text_tip_color">#FFFFFFFF</color>
+    <color name="person_info_text_edit_color">#FFFFFFFF</color>
+	<color name="other_info_text_color">#FFFFFFFF</color>
+	<color name="switch_text_color">#FFFFFFFF</color>
+
+</resources>

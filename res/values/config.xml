@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="item_info_icon_weight">1</integer>
+    <integer name="item_info_other_weight">10</integer>
+    <integer name="person_info_tip_weight">1</integer>
+    <integer name="person_info_edit_weight">4</integer>
+    <integer name="person_info_pen_weight">1</integer>
+    <integer name="person_info_space_weight">3</integer>
+    <integer name="person_info_switch_weight">2</integer>
+
+</resources>

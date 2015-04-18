@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">fitmix</string>
+    <string name="try_out">Or try out now!</string>
+    <string name="login">Login</string>
+    <string name="registe">Registe</string>
+    <string name="logo">logo</string>
+    <string name="qq">QQ</string>
+    <string name="weibo">Weibo</string>
+    <string name="wechat">WeChat</string>
+    <string name="email_login_login">Login</string>
+    <string name="email_login_forgot_password">Forgot password</string>    
+	<string name="email_login_done">Done</string>	
+	<string name="email_registe">Registe</string>
+    <string name="email_registe_next">Next</string>
+	
+	<string name="rsp_error_user_exist">The username has exist</string>
+	<string name="rsp_error_password_length_error">The password length must at least 6</string>
+	<string name="rsp_error_email_error">The email format is invalide</string>
+	<string name="rsp_error_login_error">uncorrect username or password</string>
+	
+    <string name="personinfo_settings">Person Info Settings</string>
+    <string name="personinfo_sex">Sex</string>
+    <string name="personinfo_age">Age</string>
+    <string name="personinfo_height">Height</string>
+    <string name="personinfo_weight">Weight</string>
+    <string name="personinfo_unit">Unit</string>
+    <string name="personinfo_male">Male</string>
+    <string name="personinfo_female">Female</string>
+    <string name="personinfo_next">Next</string>
+    <string name="personinfo_unit_chinese">kg/cm</string>
+    <string name="personinfo_unit_english">lb/in</string>
+    <string name="personinfo_pen">info</string>
+    <string name="other_setting">Location and Reminder</string>
+    <string name="other_setting_tip">Select the following, then we can service you better </string>    
+    <string name="other_setting_location">Allow location access</string>
+    <string name="other_setting_notification">Allow push notification</string>
+    <string name="other_setting_trail">Allow remember your trail</string>
+    <string name="other_setting_finish">Done</string>
+    <string name="music_run">Run</string>
+    <string name="music_ride">Ride</string>
+    <string name="music_swim">Swim</string>
+    <string name="music_more">More</string>
+    <string name="music_title">Music</string>
+    <string name="music_my">My</string>
+    <string name="music_community">Community</string>
+    <string name="music_search">Search</string>
+    <string name="music_exercise">Exercise</string>
+    <string name="music_school">School</string>
+    <string name="forgot_password_email_tip">Please input your email for registe</string>
+    <string name="forgot_password_submit">Submit</string>
+    <string name="forgot_password_tip">Tip</string>
+    <string name="forgot_password_message">The password have set to your email</string>
+    <string name="forgot_password_ok">OK</string>
+
+</resources>
