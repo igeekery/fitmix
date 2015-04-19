@@ -71,13 +71,22 @@
         </activity>
         <activity
             android:name=".MusicMainActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/other_setting"
+            android:configChanges="orientation|keyboardHidden|screenSize"          
+			android:theme="@style/MusicTheme"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MyHistoryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/MusicTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>		
     </application>
 
 </manifest>

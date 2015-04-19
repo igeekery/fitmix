@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/music_category_titlebar_height"
+        android:gravity="bottom" >
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/music_run"
+            android:text="@string/music_run"
+            android:textColor="@color/music_category_color"
+            android:textSize="@dimen/music_category_textsize" />
+
+        <Button
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:text="@string/music_more"
+            android:textColor="@color/music_more_color"
+            android:textSize="@dimen/music_more_textsize" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/album_stand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

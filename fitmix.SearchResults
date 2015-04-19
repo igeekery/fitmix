@@ -1,0 +1,4 @@
+---- black_overlay Matches (3 in 3 files) ----
+Colors.xml (res\values):    <color name="black_overlay">#66000000</color>
+R.java (gen\com\fitmix\sdk):        public static final int black_overlay=0x7f050000;
+Styles.xml (res\values-v11):        <item name="android:background">@color/black_overlay</item>

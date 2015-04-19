@@ -41,11 +41,11 @@
     <string name="music_run">跑步</string>
     <string name="music_ride">骑行</string>
     <string name="music_swim">游泳</string>
-    <string name="music_more">显示全部</string>
-    <string name="music_title">Mix</string>
+    <string name="music_more">显示全部&#62;</string>
+    <string name="music_mix">Mix</string>
     <string name="music_my">我的</string>
     <string name="music_community">圈子</string>
-    <string name="music_search">搜索</string>
+	<string name="music_close">收起^</string>
     <string name="music_exercise">运动</string>
     <string name="music_school">流派</string>
     <string name="forgot_password_email_tip">请输入您注册的邮箱</string>
@@ -54,4 +54,19 @@
     <string name="forgot_password_message">您的新密码已发送至您的邮箱</string>
     <string name="forgot_password_ok">确定</string>
 
+	
+	<string name="reg_state_registed">已登录</string>
+	<string name="reg_state_unregisted">未登录</string>
+	<string name="my_login">登录</string>
+	<string name="my_last_record">上次跑步记录</string>
+	<string name="record_time">时间</string>
+	<string name="record_distance">公里</string>
+	<string name="record_speed">速度</string>
+	<string name="record_bpm">BPM</string>
+	<string name="record_history">历史记录</string>
+	<string name="history_my_music">我的音乐</string>
+	<string name="history_downloading">下载中</string>
+	<string name="history_my_favorite">我的收藏</string>
+	
+	
 </resources>

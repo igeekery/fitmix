@@ -41,13 +41,14 @@
     <string name="music_run">Run</string>
     <string name="music_ride">Ride</string>
     <string name="music_swim">Swim</string>
-    <string name="music_more">More</string>
-    <string name="music_title">Music</string>
+    <string name="music_more">More&#62;</string>
+    <string name="music_mix">Mix</string>
     <string name="music_my">My</string>
     <string name="music_community">Community</string>
     <string name="music_search">Search</string>
     <string name="music_exercise">Exercise</string>
     <string name="music_school">School</string>
+	<string name="music_close">close^</string>
     <string name="forgot_password_email_tip">Please input your email for registe</string>
     <string name="forgot_password_submit">Submit</string>
     <string name="forgot_password_tip">Tip</string>

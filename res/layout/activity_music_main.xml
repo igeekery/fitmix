@@ -1,300 +1,92 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    android:orientation="vertical"
-     >
-<LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/music_tab_bg"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-    
-     >
-           <TextView
-           	android:id="@+id/music_search"
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/music_title_size"
-            	android:text="@string/music_search"               
-              />        
-           <TextView
-           	android:id="@+id/music_exercise"
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/music_title_size"
-            	android:text="@string/music_exercise"               
-              />        
-           <TextView
-           	android:id="@+id/music_school"
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/music_title_size"
-            	android:text="@string/music_school"               
-              />        
-              
-</LinearLayout>
+    android:background="@drawable/background" >
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="@dimen/music_top_bar_width"
+            android:layout_height="@dimen/music_top_bar_height"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal" >
+
+            <ToggleButton
+                android:id="@+id/music_search"
+                style="@style/MusicTopBtnStyle"
+                android:drawableRight="@drawable/music_search"
+                android:paddingRight="15dp"
+                android:textOff=""
+                android:textOn="" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/music_top_bar_space" />
+
+            <ToggleButton
+                android:id="@+id/music_exercise"
+                style="@style/MusicTopBtnStyle"
+                android:textOff="@string/music_exercise"
+                android:textOn="@string/music_exercise" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/music_top_bar_space" />
+
+            <ToggleButton
+                android:id="@+id/music_school"
+                style="@style/MusicTopBtnStyle"
+                android:textOff="@string/music_school"
+                android:textOn="@string/music_school" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.fitmix.sdk.MusicCategoryPage
+				android:id="@+id/category_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.fitmix.sdk.MusicCategoryPage>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/tab_select"
-        android:contentDescription=""
- 	/>
-<LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-     >
-     
- <LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-     >
- <RelativeLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-     >
-           <TextView
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_marginLeft="10dp"
-                android:textSize="@dimen/music_subject_size"
-            	android:text="@string/music_run"               
-              />        
-           <TextView
-           	android:id="@+id/music_run_more"
-	        android:textColor="@android:color/white"
-	        android:layout_alignParentRight="true"                
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/music_more_size"
-	        android:layout_marginRight="10dp"
-            	android:text="@string/music_more"               
-              />          
-</RelativeLayout> 
+        android:layout_gravity="bottom"
+        android:background="@drawable/music_bottom_bg"
+        android:orientation="horizontal" >
 
- <LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-     >
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
-             <View
-                android:layout_width="10dp"
-                android:layout_height="1dp"
-                /> 	
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
-             <View
-                android:layout_width="10dp"
-                android:layout_height="1dp"
-                /> 	
+        <ToggleButton
+            android:id="@+id/music_mix"
+            style="@style/MusicBottomBtnStyle"
+            android:drawableTop="@drawable/music_mix"
+            android:textOff="@string/music_mix"
+            android:textOn="@string/music_mix" />
 
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
- 	
-</LinearLayout>     
-</LinearLayout>
- <LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-     >
- <RelativeLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-     >
-           <TextView
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_marginLeft="10dp"
-                android:textSize="@dimen/music_subject_size"
-            	android:text="@string/music_ride"               
-              />        
-           <TextView
-           	android:id="@+id/music_ride_more"
-	        android:textColor="@android:color/white"
-	        android:layout_alignParentRight="true"                
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/music_more_size"
-	        android:layout_marginRight="10dp"
-            	android:text="@string/music_more"               
-              />          
-</RelativeLayout> 
+        <ToggleButton
+            android:id="@+id/music_my"
+            style="@style/MusicBottomBtnStyle"
+            android:drawableTop="@drawable/music_my"
+            android:textOff="@string/music_my"
+            android:textOn="@string/music_my" />
 
- <LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-     >
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
-             <View
-                android:layout_width="10dp"
-                android:layout_height="1dp"
-                /> 	
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
-             <View
-                android:layout_width="10dp"
-                android:layout_height="1dp"
-                /> 	
+        <ToggleButton
+            android:id="@+id/music_community"
+            style="@style/MusicBottomBtnStyle"
+            android:drawableTop="@drawable/music_community"
+            android:textOff="@string/music_community"
+            android:textOn="@string/music_community" />
+    </LinearLayout>
 
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
- 	
-</LinearLayout>     
-</LinearLayout>
- <LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-     >
- <RelativeLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-     >
-           <TextView
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_marginLeft="10dp"
-                android:textSize="@dimen/music_subject_size"
-            	android:text="@string/music_swim"               
-              />        
-           <TextView
-           	android:id="@+id/music_swim_more"
-	        android:textColor="@android:color/white"
-	        android:layout_alignParentRight="true"                
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/music_more_size"
-	        android:layout_marginRight="10dp"
-            	android:text="@string/music_more"               
-              />          
-</RelativeLayout> 
-
- <LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-     >
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
-             <View
-                android:layout_width="10dp"
-                android:layout_height="1dp"
-                /> 	
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
-             <View
-                android:layout_width="10dp"
-                android:layout_height="1dp"
-                /> 	
-
-     <ImageView
-        android:layout_width="@dimen/music_corver_size"
-        android:layout_height="@dimen/music_corver_size"
-        android:src="@drawable/music_corver"
-        android:contentDescription=""
- 	/>    
- 	
-</LinearLayout>     
-</LinearLayout>
-
-</LinearLayout>
-<LinearLayout 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:orientation="horizontal"
-     >
-           <TextView
-           	android:id="@+id/music_tile"
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/music_title"
-                android:textSize="@dimen/music_tab_size"
-            	android:text="@string/music_title"               
-              />        
-           <TextView
-           	android:id="@+id/music_my"
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/music_my"
-                android:textSize="@dimen/music_tab_size"
-            	android:text="@string/music_my"               
-              />        
-           <TextView
-           	android:id="@+id/music_community"
-	        android:textColor="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:drawableTop="@drawable/music_community"
-                android:textSize="@dimen/music_tab_size"
-            	android:text="@string/music_community"               
-              />        
-              
-</LinearLayout>
-</LinearLayout>
+</FrameLayout>
