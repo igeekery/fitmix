@@ -1,4 +1,73 @@
----- black_overlay Matches (3 in 3 files) ----
-Colors.xml (res\values):    <color name="black_overlay">#66000000</color>
-R.java (gen\com\fitmix\sdk):        public static final int black_overlay=0x7f050000;
-Styles.xml (res\values-v11):        <item name="android:background">@color/black_overlay</item>
+---- style Matches (95 in 11 files) ----
+Activity_music_main.xml (res\layout):                style="@style/MusicTopBtnStyle"
+Activity_music_main.xml (res\layout):                style="@style/MusicTopBtnStyle"
+Activity_music_main.xml (res\layout):                style="@style/MusicTopBtnStyle"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                style="@style/my_history_normalText"
+Activity_myhistory.xml (res\layout):                    style="@style/my_history_text2"
+Activity_myhistory.xml (res\layout):                    style="@style/my_history_text3"
+Activity_myhistory.xml (res\layout):                    style="@style/my_history_text2"
+Activity_myhistory.xml (res\layout):                    style="@style/my_history_text3"
+Activity_myhistory.xml (res\layout):                    style="@style/my_history_text2"
+Activity_myhistory.xml (res\layout):                    style="@style/my_history_text3"
+Activity_person_info.xml (res\layout):                    style="person_info_edit" />
+Activity_person_info.xml (res\layout):                    style="person_info_edit" />
+Activity_person_info.xml (res\layout):                    style="person_info_edit" />
+AndroidManifest.xml:        android:theme="@style/AppTheme" >
+AndroidManifest.xml:            android:theme="@style/LoginTheme" >
+AndroidManifest.xml:			android:theme="@style/MusicTheme"
+AndroidManifest.xml:            android:theme="@style/MusicTheme" >
+AndroidManifest.xml (bin):        android:theme="@style/AppTheme" >
+AndroidManifest.xml (bin):            android:theme="@style/LoginTheme" >
+AndroidManifest.xml (bin):			android:theme="@style/MusicTheme"
+AndroidManifest.xml (bin):            android:theme="@style/MusicTheme" >
+Music_bottom_bar.xml (res\layout):            style="@style/MusicBottomBtnStyle"
+Music_bottom_bar.xml (res\layout):            style="@style/MusicBottomBtnStyle"
+Music_bottom_bar.xml (res\layout):            style="@style/MusicBottomBtnStyle"
+R.java (gen\com\fitmix\sdk):    public static final class style {
+Styles.xml (res\values):    <style name="AppBaseTheme" parent="android:Theme.Light">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="AppTheme" parent="AppBaseTheme">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="LoginTheme" parent="android:Theme.NoTitleBar">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="MusicTheme" parent="android:Theme.NoTitleBar">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="MusicBottomBtnStyle">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="MusicTopBtnStyle">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="MusicCategoryStyle">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="MusicMoreStyle">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="MusicAlbumStyle">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="my_history_normalText">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="my_history_text2">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="my_history_text3">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="switch_button">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values):    <style name="person_info_edit">
+Styles.xml (res\values):    </style>
+Styles.xml (res\values-v11):    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+Styles.xml (res\values-v11):    </style>
+Styles.xml (res\values-v11):    <style name="FullscreenTheme" parent="android:Theme.Holo">
+Styles.xml (res\values-v11):        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+Styles.xml (res\values-v11):    </style>
+Styles.xml (res\values-v11):    <style name="FullscreenActionBarStyle" parent="android:Widget.Holo.ActionBar">
+Styles.xml (res\values-v11):    </style>
+Styles.xml (res\values-v14):    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+Styles.xml (res\values-v14):    </style>
+Switch_button.xml (res\layout):        style="@style/switch_button" />
+Switch_button.xml (res\layout):        style="@style/switch_button" />

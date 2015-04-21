@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+        android:background="@drawable/music_bottom_bg"	  
+    android:orientation="horizontal" >
+
+
+
+        <ToggleButton
+            android:id="@+id/music_mix"
+            style="@style/MusicBottomBtnStyle"
+            android:drawableTop="@drawable/music_mix"
+            android:textOff="@string/music_mix"
+            android:textOn="@string/music_mix" />
+
+        <ToggleButton
+            android:id="@+id/music_my"
+            style="@style/MusicBottomBtnStyle"
+            android:drawableTop="@drawable/music_my"
+            android:textOff="@string/music_my"
+            android:textOn="@string/music_my" />
+
+        <ToggleButton
+            android:id="@+id/music_community"
+            style="@style/MusicBottomBtnStyle"
+            android:drawableTop="@drawable/music_community"
+            android:textOff="@string/music_community"
+            android:textOn="@string/music_community" />
+  
+</LinearLayout>

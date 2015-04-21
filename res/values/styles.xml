@@ -36,7 +36,7 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@drawable/music_bottom_btn_color</item>
         <item name="android:textSize">@dimen/music_bottom_btn_textsize</item>
-		<item name="android:onClick">myClickHandler</item>
+        <item name="android:onClick">myClickHandler</item>
     </style>
 
     <style name="MusicTopBtnStyle">
@@ -47,7 +47,7 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@drawable/music_top_btn_color</item>
         <item name="android:textSize">@dimen/music_top_btn_textsize</item>
-		<item name="android:onClick">myClickHandler</item>		                
+        <item name="android:onClick">myClickHandler</item>
     </style>
 
     <style name="MusicCategoryStyle">
@@ -73,22 +73,45 @@
         <item name="android:scaleType">center</item>
         <item name="android:src">@drawable/music_corver</item>
     </style>
+
     <style name="my_history_normalText">
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/my_history_normal_text_size</item>
         <item name="android:textColor">@color/my_history_normal_text_color</item>
-		
     </style>
+
     <style name="my_history_text2">
         <item name="android:textSize">@dimen/my_history_text2_size</item>
         <item name="android:textColor">@color/my_history_grey_color</item>
-		
     </style>
-            <style name="my_history_text3">
+
+    <style name="my_history_text3">
         <item name="android:textSize">@dimen/my_history_text3_size</item>
         <item name="android:textColor">@color/my_history_grey_color</item>
-		
-    </style>    
-    
+    </style>
+
+    <style name="switch_button">
+        <item name="android:textSize">@dimen/switch_button_text_size</item>
+        <item name="android:textColor">@color/switch_button_text_color</item>
+        <item name="android:background">@color/switch_button_up_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="person_info_edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">@integer/person_info_edit_weight</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingLeft">@dimen/person_info_edit_padding_left</item>
+        <item name="android:paddingRight">@dimen/person_info_edit_padding_right</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">@dimen/person_info_edit_text_size</item>
+        <item name="android:textColor">@color/person_info_text_edit_color</item>
+        <item name="android:gravity">right|center_vertical</item>
+    </style>
+
 </resources>

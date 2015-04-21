@@ -7,6 +7,8 @@
     <dimen name="item_info_tip_text_size">12dp</dimen>
     <dimen name="item_info_edit_text_size">16dp</dimen>
 	<dimen name="switch_text_size">16dp</dimen>
+	<dimen name="switch_button_text_size">16dp</dimen>	
+
 	<dimen name="music_bottom_btn_textsize">14dp</dimen>
 	<dimen name="music_top_btn_textsize">20dp</dimen>
 	<dimen name="music_category_textsize">18dp</dimen>

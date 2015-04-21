@@ -11,4 +11,9 @@
         <attr name="buttonBarButtonStyle" format="reference" />
     </declare-styleable>
 
+   <declare-styleable name="SwitchButton">
+        <attr name="textOn" format="string" />
+        <attr name="textOff" format="string" />
+    </declare-styleable>
+	
 </resources>

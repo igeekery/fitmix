@@ -13,41 +13,31 @@ import android.widget.ToggleButton;
 
 public class MusicMainActivity extends Activity {
 	private MusicCategoryPage musicCategoryPage;
+	private MusicBottombar bottombar;
 	private final int TOP_BAR_SEARCH = 0;
 	private final int TOP_BAR_EXERCISE = 1;
 	private final int TOP_BAR_SCHOOL = 2;
-	private final int BOTTOM_BAR_MIX = 0;
-	private final int BOTTOM_BAR_MY = 1;
-	private final int BOTTOM_BAR_COMMUNITY = 2;
 	
 	private ToggleButton mSearch;
 	private ToggleButton mExercise;
 	private ToggleButton mSchool;
-
-	private ToggleButton mMix;
-	private ToggleButton mMy;
-	private ToggleButton mCommunity;
 	
 	private int iTopbarMode = TOP_BAR_EXERCISE;
-	private int iBottombarMode = BOTTOM_BAR_MIX;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_music_main);
         musicCategoryPage = (MusicCategoryPage)findViewById(R.id.category_page);
+        bottombar = (MusicBottombar)findViewById(R.id.bottombar);
         mSearch = (ToggleButton)findViewById(R.id.music_search);
         mExercise = (ToggleButton)findViewById(R.id.music_exercise);
         mSchool = (ToggleButton)findViewById(R.id.music_school);
         
-        mMix = (ToggleButton)findViewById(R.id.music_mix);
-        mMy = (ToggleButton)findViewById(R.id.music_my);
-        mCommunity = (ToggleButton)findViewById(R.id.music_community);
         onTopbarCkick();
-        onBottombarCkick();
+        bottombar.setCurrentButton(MusicBottombar.BOTTOM_BAR_MIX);
     }
     private void refresTopbarState(){
-    	Log.d("fhq", "11111111:" + iTopbarMode);
     	switch(iTopbarMode){
     		case TOP_BAR_SEARCH:
     			mSearch.setChecked(true);
@@ -114,30 +104,6 @@ public class MusicMainActivity extends Activity {
     	refresContent();
     }
     
-    private void refresBottombarState(){
-    	Log.d("fhq", "2222222:" + iBottombarMode);
-    	switch(iBottombarMode){
-    		case BOTTOM_BAR_MIX:
-    			mMix.setChecked(true);
-    			mMy.setChecked(false);
-    			mCommunity.setChecked(false);
-    			break;
-    		case TOP_BAR_EXERCISE:    		
-    			mMix.setChecked(false);
-    			mMy.setChecked(true);
-    			mCommunity.setChecked(false);
-    			break;
-    		case TOP_BAR_SCHOOL:    		
-    			mMix.setChecked(false);
-    			mMy.setChecked(false);
-    			mCommunity.setChecked(true);
-    			break;
-    	}
-    	
-    }   
-    private void onBottombarCkick(){
-    	refresBottombarState();
-    }    
     public void myClickHandler(View v){
 		switch(v.getId()){
 			case R.id.music_search:
@@ -151,17 +117,6 @@ public class MusicMainActivity extends Activity {
 			case R.id.music_school:
 				iTopbarMode = TOP_BAR_SCHOOL;
 				onTopbarCkick();
-				break;
-			case R.id.music_mix:
-				iBottombarMode = BOTTOM_BAR_MIX;
-				onBottombarCkick();
-				break;
-			case R.id.music_my:
-				startActivity(new Intent(MusicMainActivity.this, MyHistoryActivity.class));
-				break;
-			case R.id.music_community:
-				iBottombarMode = BOTTOM_BAR_COMMUNITY;
-				onBottombarCkick();
 				break;
 		}
 	}    

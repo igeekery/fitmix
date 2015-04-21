@@ -23,4 +23,7 @@
 	<color name="my_history_bg_color">#FF1A1A1A</color>	
 	<color name="my_history_bar_color">#FF232323</color>	
 	<color name="my_history_grey_color">#FF808080</color>	
+	<color name="switch_button_text_color">@android:color/white</color>	
+	<color name="switch_button_up_color">#FF4D4D4D</color>	
+	<color name="switch_button_down_color">#FF1A1A1A</color>	
 </resources>

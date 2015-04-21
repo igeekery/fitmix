@@ -1,5 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fitmix="http://schemas.android.com/apk/res/com.fitmix.sdk"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background" >
@@ -47,16 +48,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="@integer/person_info_space_weight" />
 
-                <Switch
+                <com.fitmix.sdk.SwitchButton
                     android:id="@+id/person_info_sex"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="@integer/person_info_switch_weight"
-                    android:textColor="@color/switch_text_color"
-                    android:textOff="@string/personinfo_male"
-                    android:textOn="@string/personinfo_female"
-                    android:textSize="@dimen/switch_text_size" />
+                    fitmix:textOff="@string/personinfo_male"
+                    fitmix:textOn="@string/personinfo_female" />
             </LinearLayout>
 
             <View
@@ -82,16 +81,7 @@
 
                 <EditText
                     android:id="@+id/person_info_age"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="@integer/person_info_edit_weight"
-                    android:background="@android:color/transparent"
-                    android:gravity="right|center_vertical"
-                    android:inputType="number"
-                    android:paddingLeft="@dimen/person_info_edit_padding_left"
-                    android:paddingRight="@dimen/person_info_edit_padding_right"
-                    android:textColor="@color/person_info_text_edit_color"
-                    android:textSize="@dimen/person_info_edit_text_size" />
+                    style="@style/person_info_edit" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -124,16 +114,7 @@
 
                 <EditText
                     android:id="@+id/person_info_height"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="@integer/person_info_edit_weight"
-                    android:background="@android:color/transparent"
-                    android:gravity="right|center_vertical"
-                    android:inputType="number"
-                    android:paddingLeft="@dimen/person_info_edit_padding_left"
-                    android:paddingRight="@dimen/person_info_edit_padding_right"
-                    android:textColor="@color/person_info_text_edit_color"
-                    android:textSize="@dimen/person_info_edit_text_size" />
+                    style="@style/person_info_edit" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -166,16 +147,7 @@
 
                 <EditText
                     android:id="@+id/person_info_weight"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="@integer/person_info_edit_weight"
-                    android:background="@android:color/transparent"
-                    android:gravity="right|center_vertical"
-                    android:inputType="number"
-                    android:paddingLeft="@dimen/person_info_edit_padding_left"
-                    android:paddingRight="@dimen/person_info_edit_padding_right"
-                    android:textColor="@color/person_info_text_edit_color"
-                    android:textSize="@dimen/person_info_edit_text_size" />
+                    style="@style/person_info_edit" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -211,16 +183,14 @@
                     android:layout_height="match_parent"
                     android:layout_weight="@integer/person_info_space_weight" />
 
-                <Switch
+                <com.fitmix.sdk.SwitchButton
                     android:id="@+id/person_info_unit"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="@integer/person_info_switch_weight"
-                    android:textColor="@color/switch_text_color"
-                    android:textOff="@string/personinfo_unit_chinese"
-                    android:textOn="@string/personinfo_unit_english"
-                    android:textSize="@dimen/switch_text_size" />
+                    fitmix:textOff="@string/personinfo_unit_chinese"
+                    fitmix:textOn="@string/personinfo_unit_english" />
             </LinearLayout>
         </LinearLayout>
 
