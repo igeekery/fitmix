@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <FrameLayout
+        android:id="@+id/album_logo"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/album_demo" />
+
+        <ProgressBar
+            android:id="@+id/download_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_color" />
+
+        <TextView
+            android:id="@+id/album_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"            
+            android:textColor="@color/album_percent_text_color"
+            android:textSize="@dimen/album_percent_text_size" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/album_info_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/album_preview_group"
+       android:layout_marginLeft="@dimen/album_group_margin_left"
+        android:layout_marginRight="@dimen/album_group_margin_right"
+         >
+
+        <LinearLayout
+            android:layout_width="@dimen/album_info_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+
+            <TextView
+                android:id="@+id/album_name"
+                style="@style/album_info_style"
+                android:textColor="@color/album_name_text_color"
+                android:textSize="@dimen/album_name_text_size"
+                 />
+
+            <TextView
+                android:id="@+id/album_author"
+                style="@style/album_info_style"
+                android:textColor="@color/album_author_text_color"
+                android:textSize="@dimen/album_author_text_size"
+                	/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <Button
+                android:id="@+id/album_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="myClickHandler"
+                android:background="@drawable/album_downloaded"
+                android:text="@string/album_download"
+                android:textColor="@color/album_download_text_color"
+                android:textSize="@dimen/album_download_text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/album_preview_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/album_introduce_group"
+        android:layout_marginLeft="@dimen/album_group_margin_left"
+        android:layout_marginRight="@dimen/album_group_margin_right"
+
+         >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/album_rect"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/album_heart"
+                style="@style/album_preview_icon_style"
+                android:drawableTop="@drawable/album_heart" />
+
+            <TextView
+                android:id="@+id/album_bpm"
+                style="@style/album_preview_icon_style"
+                android:drawableTop="@drawable/album_bpm" />
+
+            <TextView
+                android:id="@+id/album_download_num"
+                style="@style/album_preview_icon_style"
+                android:drawableTop="@drawable/album_download_num" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/album_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="myClickHandler"
+                android:layout_gravity="center"
+                android:src="@drawable/album_play" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/album_introduce_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/album_introduce"
+        android:layout_above="@+id/go"
+        android:layout_marginLeft="@dimen/album_group_margin_left"
+        android:layout_marginRight="@dimen/album_group_margin_right"
+        android:layout_marginTop="@dimen/album_introduce_group_margin_top"
+        android:orientation="vertical"
+         >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/album_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="false"                
+                android:textColor="@color/album_introduce_text_color"
+                android:textSize="@dimen/album_introduce_text_size" />
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="myClickHandler"
+        android:layout_alignParentBottom="true"        
+        android:background="@drawable/album_go_bg"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/album_go" />
+    </FrameLayout>
+
+</RelativeLayout>

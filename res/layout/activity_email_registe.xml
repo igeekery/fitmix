@@ -69,15 +69,15 @@
                         android:id="@+id/email_registe_email"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="@integer/item_info_other_weight"
                         android:layout_gravity="center_vertical"
+                        android:layout_weight="@integer/item_info_other_weight"
                         android:background="@android:color/transparent"
                         android:gravity="left|center_vertical"
                         android:inputType="textEmailAddress"
                         android:paddingLeft="@dimen/item_info_other_paddingLeft"
                         android:paddingRight="@dimen/item_info_other_paddingRight"
-                        android:textSize="@dimen/item_info_edit_text_size"
-                        android:textColor="@color/edit_text_color" />
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/item_info_edit_text_size" />
                 </LinearLayout>
 
                 <View
@@ -106,15 +106,15 @@
                         android:id="@+id/email_registe_username"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="@integer/item_info_other_weight"
                         android:layout_gravity="center_vertical"
+                        android:layout_weight="@integer/item_info_other_weight"
                         android:background="@android:color/transparent"
                         android:gravity="left|center_vertical"
                         android:inputType="text"
                         android:paddingLeft="@dimen/item_info_other_paddingLeft"
                         android:paddingRight="@dimen/item_info_other_paddingRight"
-                        android:textSize="@dimen/item_info_edit_text_size"
-                        android:textColor="@color/edit_text_color" />
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/item_info_edit_text_size" />
                 </LinearLayout>
 
                 <View
@@ -143,15 +143,15 @@
                         android:id="@+id/email_registe_password"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="@integer/item_info_other_weight"
                         android:layout_gravity="center_vertical"
+                        android:layout_weight="@integer/item_info_other_weight"
                         android:background="@android:color/transparent"
                         android:gravity="left|center_vertical"
                         android:inputType="textPassword"
                         android:paddingLeft="@dimen/item_info_other_paddingLeft"
                         android:paddingRight="@dimen/item_info_other_paddingRight"
-                        android:textSize="@dimen/item_info_edit_text_size"
-                        android:textColor="@color/edit_text_color" />
+                        android:textColor="@color/edit_text_color"
+                        android:textSize="@dimen/item_info_edit_text_size" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -164,12 +164,8 @@
 
                 <Button
                     android:id="@+id/email_registe_next"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/step_btn_background"
-                    android:onClick="myClickHandler"
-                    android:text="@string/email_registe_next"
-                    android:textColor="@drawable/btn_color" />
+                    style="@style/step_button"
+                    android:text="@string/email_registe_next" />
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>

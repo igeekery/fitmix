@@ -91,7 +91,7 @@
         <item name="android:textColor">@color/my_history_grey_color</item>
     </style>
 
-    <style name="switch_button">
+    <style name="switch_button_item">
         <item name="android:textSize">@dimen/switch_button_text_size</item>
         <item name="android:textColor">@color/switch_button_text_color</item>
         <item name="android:background">@color/switch_button_up_color</item>
@@ -101,6 +101,23 @@
         <item name="android:layout_weight">1</item>
     </style>
 
+    <style name="switch_button"> 
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">@integer/person_info_switch_weight</item>
+    </style>
+
+    <style name="step_button"> 
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/step_btn_background</item>
+        <item name="android:onClick">myClickHandler</item>        
+        <item name="android:textSize">@dimen/step_button_text_size</item>        
+        <item name="android:textColor">@drawable/btn_color</item>                
+    </style>
+    
     <style name="person_info_edit">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
@@ -114,4 +131,20 @@
         <item name="android:gravity">right|center_vertical</item>
     </style>
 
+    <style name="album_preview_icon_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/album_preview_icon_text_size</item>
+        <item name="android:textColor">@color/album_preview_icon_text_color</item>
+        <item name="android:gravity">center</item>
+		<item name="android:layout_gravity">center</item>
+    </style>
+	 <style name="album_info_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+		<item name="android:layout_gravity">center</item>
+    </style>
 </resources>

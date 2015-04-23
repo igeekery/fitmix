@@ -26,4 +26,11 @@
 	<color name="switch_button_text_color">@android:color/white</color>	
 	<color name="switch_button_up_color">#FF4D4D4D</color>	
 	<color name="switch_button_down_color">#FF1A1A1A</color>	
+	<color name="album_preview_icon_text_color">#FF808080</color>	
+	<color name="album_introduce_text_color">#FF808080</color>	
+	<color name="album_name_text_color">@android:color/white</color>	
+	<color name="album_author_text_color">#FF808080</color>	
+	<color name="album_download_text_color">@android:color/white</color>	
+	<color name="album_percent_text_color">@android:color/white</color>	
+	<drawable name="progress_color">#808000FF</drawable>	
 </resources>

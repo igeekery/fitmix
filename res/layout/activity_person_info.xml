@@ -50,10 +50,7 @@
 
                 <com.fitmix.sdk.SwitchButton
                     android:id="@+id/person_info_sex"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_switch_weight"
+                    style="@style/switch_button"                    
                     fitmix:textOff="@string/personinfo_male"
                     fitmix:textOn="@string/personinfo_female" />
             </LinearLayout>
@@ -185,10 +182,7 @@
 
                 <com.fitmix.sdk.SwitchButton
                     android:id="@+id/person_info_unit"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_switch_weight"
+                    style="@style/switch_button"
                     fitmix:textOff="@string/personinfo_unit_chinese"
                     fitmix:textOn="@string/personinfo_unit_english" />
             </LinearLayout>
@@ -202,13 +196,9 @@
 
             <Button
                 android:id="@+id/person_info_next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/step_btn_background"
-                android:onClick="myClickHandler"
+                style="@style/step_button"
                 android:text="@string/personinfo_next"
-                android:textColor="@drawable/btn_color" />
+                />
         </LinearLayout>
     </LinearLayout>
 

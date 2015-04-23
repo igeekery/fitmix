@@ -1,6 +1,7 @@
 package com.fitmix.sdk;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -40,6 +41,7 @@ public class MusicCorver extends FrameLayout {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
+				getContext().startActivity(new Intent(getContext(), AlbumActivity.class));
 				
 			}
 		});

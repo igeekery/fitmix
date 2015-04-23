@@ -8,6 +8,7 @@
     <dimen name="item_info_edit_text_size">16dp</dimen>
 	<dimen name="switch_text_size">16dp</dimen>
 	<dimen name="switch_button_text_size">16dp</dimen>	
+	<dimen name="step_button_text_size">16dp</dimen>	
 
 	<dimen name="music_bottom_btn_textsize">14dp</dimen>
 	<dimen name="music_top_btn_textsize">20dp</dimen>
@@ -91,4 +92,16 @@
 <dimen name="my_history_v_spacebar_3">6dp</dimen>
 <dimen name="my_history_v_spacebar_4">4dp</dimen>
 <dimen name="my_history_h_spacebar">2dp</dimen>
+
+<dimen name="album_preview_icon_text_size">10dp</dimen>
+<dimen name="album_introduce">100dp</dimen>
+<dimen name="album_group_margin_left">30dp</dimen>
+<dimen name="album_group_margin_right">30dp</dimen>
+<dimen name="album_introduce_group_margin_top">10dp</dimen>
+<dimen name="album_introduce_text_size">10dp</dimen>
+<dimen name="album_info_width">200dp</dimen>
+<dimen name="album_name_text_size">16dp</dimen>
+<dimen name="album_author_text_size">16dp</dimen>
+<dimen name="album_download_text_size">10dp</dimen>
+<dimen name="album_percent_text_size">10dp</dimen>
 </resources>

@@ -6,10 +6,10 @@
 
     <TextView
         android:id="@+id/left"
-        style="@style/switch_button" />
+        style="@style/switch_button_item" />
 
     <TextView
         android:id="@+id/right"
-        style="@style/switch_button" />
+        style="@style/switch_button_item" />
 
 </LinearLayout>

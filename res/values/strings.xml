@@ -55,4 +55,21 @@
     <string name="forgot_password_message">The password have set to your email</string>
     <string name="forgot_password_ok">OK</string>
 
+	<string name="reg_state_registed">Logined</string>
+	<string name="reg_state_unregisted">Unlogoin</string>
+	<string name="my_login">Login</string>
+	<string name="my_last_record">Last Record</string>
+	<string name="record_time">Time</string>
+	<string name="record_distance">Distance</string>
+	<string name="record_speed">Speed</string>
+	<string name="record_bpm">BPM</string>
+	<string name="record_history">History</string>
+	<string name="history_my_music">Music</string>
+	<string name="history_downloading">Downloading</string>
+	<string name="history_my_favorite">Favorite</string>
+	<string name="album_detail">Album Detail</string>
+	<string name="album_download">Download</string>
+	<string name="album_downloading">Downloading</string>
+	<string name="album_downloaded">Downloaded</string>
+	<string name="album_demo">test</string>
 </resources>
