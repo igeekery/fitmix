@@ -147,4 +147,28 @@
         <item name="android:gravity">center</item>
 		<item name="android:layout_gravity">center</item>
     </style>
+	
+	 <style name="run_data_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>        
+        <item name="android:gravity">center</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:textColor">@color/run_data_text_color</item>
+		<item name="android:textSize">@dimen/run_data_text_size</item>
+    </style>
+	 <style name="run_info_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>        
+        <item name="android:gravity">center</item>
+		<item name="android:layout_gravity">center</item>
+		<item name="android:textColor">@color/run_info_text_color</item>
+		<item name="android:textSize">@dimen/run_info_text_size</item>
+    </style>
+	 <style name="run_time_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>        
+		<item name="android:textColor">@color/run_time_text_color</item>
+		<item name="android:textSize">@dimen/run_time_text_size</item>
+    </style>
+		
 </resources>

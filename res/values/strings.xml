@@ -72,4 +72,10 @@
 	<string name="album_downloading">Downloading</string>
 	<string name="album_downloaded">Downloaded</string>
 	<string name="album_demo">test</string>
+	
+<string name="run_speed">speed m/km</string>
+	<string name="run_bpm">BPM</string>
+	<string name="run_time">time</string>
+	<string name="run_distance">distance km</string>
+	<string name="run_last_record">last record</string>	
 </resources>

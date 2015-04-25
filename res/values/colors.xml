@@ -32,5 +32,18 @@
 	<color name="album_author_text_color">#FF808080</color>	
 	<color name="album_download_text_color">@android:color/white</color>	
 	<color name="album_percent_text_color">@android:color/white</color>	
+	<color name="run_data_text_color">#FFFF901E</color>	
+	<color name="run_info_text_color">#FF808080</color>	
+	<color name="run_last_record_text_color">#FF808080</color>	
+	<color name="run_distance_data_text_color">@android:color/white</color>	
+	<color name="run_distance_info_text_color">#FF808080</color>	
+	<color name="run_main_info_bg_color">#80000000</color>	
+	
+	<color name="run_album_text_color">@android:color/white</color>	
+	<color name="run_author_text_color">#FF808080</color>	
+	<color name="run_time_text_color">#FF808080</color>	
+	
 	<drawable name="progress_color">#808000FF</drawable>	
+	<drawable name="run_progress_fg">#FFFF901E</drawable>	
+	<drawable name="run_progress_bg">#FF666666</drawable>	
 </resources>

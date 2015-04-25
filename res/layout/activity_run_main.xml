@@ -1,0 +1,256 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background" >
+
+    <LinearLayout
+        android:id="@+id/run_btn_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/run_camera_space_h"
+            android:orientation="vertical" >
+                   <ImageView
+                android:id="@+id/run_camera"                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/run_time_padding"
+                android:src="@drawable/run_camera" />
+                   
+            </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/run_time_padding"
+            android:paddingRight="@dimen/run_time_padding" >
+
+            <TextView
+                android:id="@+id/time_current"
+                style="@style/run_time_style"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/time_total"
+                style="@style/run_time_style"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ProgressBar
+                android:id="@+id/run_music_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/run_progress_width"
+                android:layout_height="@dimen/run_progress_height"
+                android:layout_gravity="center"
+                android:background="@drawable/run_progress_bg"
+                android:max="100"
+                android:progressDrawable="@drawable/run_progress_fg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/run_album"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingRight="2dp"
+                android:textColor="@color/run_album_text_color"
+                android:textSize="@dimen/run_album_text_size" />
+
+            <TextView
+                android:id="@+id/run_author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="2dp"
+                android:textColor="@color/run_author_text_color"
+                android:textSize="@dimen/run_author_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/run_album"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/run_album" />
+
+            <View
+                android:layout_width="@dimen/run_main_btn_space_h"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/run_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/run_play" />
+
+            <View
+                android:layout_width="@dimen/run_main_btn_space_h"
+                android:layout_height="1dp" />
+
+
+            <ImageView
+                android:id="@+id/run_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/run_next" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/run_info_group"
+        
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/run_main_info_height"
+        android:layout_marginTop="@dimen/run_info_group_margin_top"
+        android:layout_below="@+id/run_btn_group"
+        android:background="@color/run_main_info_bg_color"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/run_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/run_distance_data_text_color"
+                    android:textSize="@dimen/run_distance_data_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/run_distance"
+                    android:textColor="@color/run_distance_info_text_color"
+                    android:textSize="@dimen/run_distance_info_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top" >
+
+                <Button
+                    android:id="@+id/run_last_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:text="@string/run_last_record"
+                    android:textColor="@color/run_last_record_text_color"
+                    android:textSize="@dimen/run_last_record_text_size" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/run_speed" />
+
+                <TextView
+                    android:id="@+id/run_speed"
+                    style="@style/run_data_style" />
+
+                <TextView
+                    style="@style/run_info_style"
+                    android:text="@string/run_speed" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/run_bpm" />
+
+                <TextView
+                    android:id="@+id/run_bpm"
+                    style="@style/run_data_style" />
+
+                <TextView
+                    style="@style/run_info_style"
+                    android:text="@string/run_bpm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/run_time" />
+
+                <TextView
+                    android:id="@+id/run_time"
+                    style="@style/run_data_style" />
+
+                <TextView
+                    style="@style/run_info_style"
+                    android:text="@string/run_time" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.fitmix.sdk.Slide
+        android:id="@+id/slide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+    </com.fitmix.sdk.Slide>
+
+</RelativeLayout>

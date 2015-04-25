@@ -104,4 +104,20 @@
 <dimen name="album_author_text_size">16dp</dimen>
 <dimen name="album_download_text_size">10dp</dimen>
 <dimen name="album_percent_text_size">10dp</dimen>
+<dimen name="run_data_text_size">20dp</dimen>
+<dimen name="run_info_text_size">14dp</dimen>
+<dimen name="run_last_record_text_size">10dp</dimen>
+<dimen name="run_distance_data_text_size">50dp</dimen>
+<dimen name="run_distance_info_text_size">20dp</dimen>
+<dimen name="run_main_info_height">220dp</dimen>
+
+<dimen name="run_main_btn_space_h">40dp</dimen>
+<dimen name="run_album_text_size">16dp</dimen>
+<dimen name="run_author_text_size">10dp</dimen>
+<dimen name="run_time_text_size">10dp</dimen>
+<dimen name="run_time_padding">40dp</dimen>
+<dimen name="run_progress_width">260dp</dimen>
+<dimen name="run_progress_height">10dp</dimen>
+<dimen name="run_camera_space_h">20dp</dimen>
+<dimen name="run_info_group_margin_top">50dp</dimen>
 </resources>

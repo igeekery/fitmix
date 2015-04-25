@@ -72,5 +72,9 @@
 	<string name="album_downloading">下载中</string>
 	<string name="album_downloaded">已下载</string>
 	<string name="album_demo">电子舞曲（Electronic Dance Music）是各种电子音乐的合称，简称电音、电子乐。广义而言，只要是使用电子设备所创造的音乐，都可属之。它们的用途往往是在舞厅、派对里用来作跳舞的背景音乐，多是DJ们制作。 电子舞曲流派分为 House, Techno ,Trance,Big Beat,Drum `N` Bass,Break Beat 和Big Beat,Reggae/Ska,Old school/Miami beat,R`N`B,Tribal,Mambo,Cha Cha,Hip House。国内经常会把电子舞曲说成是DJ音乐，实际上所谓的DJ是这些音乐的制作者。电子音乐和电子舞曲是一个意思，国内说电音会比较多，而西方都是说电子舞曲</string>
-	
+	<string name="run_speed">速度 分钟/公里</string>
+	<string name="run_bpm">步频</string>
+	<string name="run_time">时长</string>
+	<string name="run_distance">距离 公里</string>
+	<string name="run_last_record">上次记录</string>
 </resources>

@@ -73,6 +73,8 @@ public class AlbumActivity extends Activity {
     public void myClickHandler(View v){
 		switch(v.getId()){
 			case R.id.go:
+				startActivity(new Intent(AlbumActivity.this,
+					RunMainActivity.class));				
 				break;
 			case R.id.album_play:
 				break;
