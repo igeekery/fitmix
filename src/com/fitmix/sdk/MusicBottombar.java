@@ -57,13 +57,11 @@ public class MusicBottombar extends FrameLayout {
 			case R.id.music_mix:
 				iBottombarMode = BOTTOM_BAR_MIX;
 				onBottombarCkick();
-				Log.d("fhq", "222222222");
 				getContext().startActivity(new Intent(getContext(), MusicMainActivity.class));
 				break;
 			case R.id.music_my:
 				iBottombarMode = BOTTOM_BAR_MIX;
 				onBottombarCkick();
-				Log.d("fhq", "333333");
 				getContext().startActivity(new Intent(getContext(), MyHistoryActivity.class));
 				
 				break;

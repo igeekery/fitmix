@@ -1,158 +1,117 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background" >
+    android:layout_height="match_parent" >
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/person_info_logo_top_margin"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/person_info_logo"
+        style="@style/ImageViewLogoStyle"
+        android:layout_marginTop="@dimen/email_login_logo_top_margin"
+        android:src="@drawable/login_logo"
         android:visibility="gone" />
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true" >
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/other_setting_topic_bottom_margin"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/TextTopicStyle"
+                android:text="@string/other_setting" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/other_setting_tip_bottom_margin"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/TextNormalStyle"
+                android:text="@string/other_setting_tip" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/other_setting_item_bottom_margin"
             android:orientation="vertical" >
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <FrameLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/other_setting_tip_bottom_margin"
-                android:orientation="vertical" >
+                android:layout_gravity="center"
+                android:background="@drawable/other_setting_background" >
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/other_setting"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/other_setting_tip1_size" />
+                    style="@style/TextOtherSettingStyle"
+                    android:text="@string/other_setting_location" />
+
+                <ToggleButton
+                    android:id="@+id/other_settings_btn_location"
+                    style="@style/ImageSwitchStyle" />
+            </FrameLayout>
+
+            <View
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/other_setting_background" >
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/other_setting_tip"
-                    android:textColor="@android:color/white"
-                    android:textOff=""
-                    android:textOn=""
-                    android:textSize="@dimen/other_setting_tip2_size" />
-            </LinearLayout>
+                    style="@style/TextOtherSettingStyle"
+                    android:text="@string/other_setting_notification" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+                <ToggleButton
+                    android:id="@+id/other_settings_btn_trail"
+                    style="@style/ImageSwitchStyle" />
+            </FrameLayout>
+
+            <View
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/other_setting_item_bottom_margin"
-                android:orientation="vertical" >
+                android:layout_gravity="center"
+                android:background="@drawable/other_setting_background" >
 
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/other_setting_background" >
+                <TextView
+                    style="@style/TextOtherSettingStyle"
+                    android:text="@string/other_setting_trail" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/other_setting_location"
-                        android:textColor="@color/other_info_text_color"
-                        android:textSize="@dimen/item_info_edit_text_size" />
-
-                    <ToggleButton
-                        android:id="@+id/other_settings_btn_location"
-                        android:layout_width="@dimen/other_setting_switch_btn_size"
-                        android:layout_height="@dimen/other_setting_switch_btn_size"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_marginRight="@dimen/other_setting_switch_btn_margin_right"
-                        android:background="@drawable/switch_btn"
-                        android:textOff=""
-                        android:textOn="" />
-                </FrameLayout>
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="@dimen/other_setting_item_space_v" />
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/other_setting_background" >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/other_setting_notification"
-                        android:textColor="@color/other_info_text_color"
-                        android:textSize="@dimen/item_info_edit_text_size" />
-
-                    <ToggleButton
-                        android:id="@+id/other_settings_btn_trail"
-                        android:layout_width="@dimen/other_setting_switch_btn_size"
-                        android:layout_height="@dimen/other_setting_switch_btn_size"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_marginRight="@dimen/other_setting_switch_btn_margin_right"
-                        android:background="@drawable/switch_btn"
-                        android:textOff=""
-                        android:textOn="" />
-                </FrameLayout>
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="@dimen/other_setting_item_space_v" />
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/other_setting_background" >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/other_setting_trail"
-                        android:textColor="@color/other_info_text_color"
-                        android:textSize="@dimen/item_info_edit_text_size" />
-
-                    <ToggleButton
-                        android:id="@+id/other_settings_btn_notification"
-                        android:layout_width="@dimen/other_setting_switch_btn_size"
-                        android:layout_height="@dimen/other_setting_switch_btn_size"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_marginRight="@dimen/other_setting_switch_btn_margin_right"
-                        android:background="@drawable/switch_btn"
-                        android:textOff=""
-                        android:textOn="" />
-                </FrameLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/other_setting_bottom_margin"
-                android:orientation="vertical" >
-
-                <Button
-                    android:id="@+id/other_setting_done"
-                    style="@style/step_button"
-                    android:text="@string/other_setting_finish" />
-            </LinearLayout>
+                <ToggleButton
+                    android:id="@+id/other_settings_btn_notification"
+                    style="@style/ImageSwitchStyle" />
+            </FrameLayout>
         </LinearLayout>
-    </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/other_setting_bottom_margin"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/other_setting_done"
+                style="@style/ButtonStepStyle"
+                android:text="@string/other_setting_finish" />
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

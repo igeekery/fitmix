@@ -15,18 +15,183 @@
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
+
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="android:configChanges">orientation|keyboardHidden|screenSize</item>
+        <item name="android:screenOrientation">portrait</item>
     </style>
 
-    <style name="LoginTheme" parent="android:Theme.NoTitleBar">
+    <style name="AppNoTitleBarTheme" parent="android:Theme.NoTitleBar">
         <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowBackground">@null</item>
+        <item name="android:windowBackground">@drawable/background</item>
+        <item name="android:configChanges">orientation|keyboardHidden|screenSize</item>
+        <item name="android:screenOrientation">portrait</item>
     </style>
 
-    <style name="MusicTheme" parent="android:Theme.NoTitleBar">
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:windowBackground">@null</item>
+    <style name="ImageViewLogoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:contentDescription">""</item>
     </style>
+
+    <style name="ImageViewPhotoStyle">
+        <item name="android:layout_width">@dimen/image_photo_size</item>
+        <item name="android:layout_height">@dimen/image_photo_size</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:onClick">myClickHandler</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:contentDescription">@null</item>
+    </style>
+
+    <style name="ButtonTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:onClick">myClickHandler</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textColor">@drawable/btn2_color</item>
+    </style>
+
+    <style name="ButtonStepStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/step_btn_background</item>
+        <item name="android:onClick">myClickHandler</item>
+        <item name="android:textSize">@dimen/step_button_text_size</item>
+        <item name="android:textColor">@drawable/btn_color</item>
+    </style>
+
+    <style name="ImageButtonNormalStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:contentDescription">""</item>
+        <item name="android:onClick">myClickHandler</item>
+    </style>
+
+    <style name="InputEditTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">@integer/item_info_other_weight</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingLeft">@dimen/item_info_other_paddingLeft</item>
+        <item name="android:paddingRight">@dimen/item_info_other_paddingRight</item>
+        <item name="android:textColor">@color/edit_text_color</item>
+        <item name="android:textSize">@dimen/item_info_edit_text_size</item>
+    </style>
+
+    <style name="InputIconStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="InputTextHintStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">@integer/person_info_tip_weight</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/edit_hint_text_color</item>
+        <item name="android:textSize">@dimen/edit_hint_text_size</item>
+    </style>
+
+    <style name="ViewSpaceForHorizontal">
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    <style name="ViewSpaceForVertical">
+        <item name="android:layout_width">1dp</item>
+    </style>
+
+    <style name="ButtonNormalStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:onClick">myClickHandler</item>
+    </style>
+
+    <style name="TextErrorStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/error_text_bg_color</item>
+        <item name="android:textColor">@color/error_text_fg_color</item>
+        <item name="android:textSize">@dimen/rsp_error_text_size</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="TextNormalStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/text_normal_fg_color</item>
+        <item name="android:textSize">@dimen/text_normal_text_size</item>
+    </style>
+
+    <style name="ImagePenStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">@integer/person_info_pen_weight</item>
+        <item name="android:src">@drawable/person_info_pen</item>
+    </style>
+
+    <style name="ImageSwitchStyle">
+        <item name="android:layout_width">@dimen/image_switch_btn_size</item>
+        <item name="android:layout_height">@dimen/image_switch_btn_size</item>
+        <item name="android:layout_gravity">right|center_vertical</item>
+        <item name="android:layout_marginRight">@dimen/other_setting_switch_btn_margin_right</item>
+        <item name="android:background">@drawable/switch_btn</item>
+        <item name="android:textOff">@null</item>
+        <item name="android:textOn">@null</item>
+    </style>
+
+    <style name="TextOtherSettingStyle" parent="TextNormalStyle">
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="TextTopicStyle" parent="TextNormalStyle">
+        <item name="android:textSize">@dimen/text_topic_text_size</item>
+    </style>
+
+    <style name="switch_button_item">
+        <item name="android:textSize">@dimen/switch_button_text_size</item>
+        <item name="android:textColor">@color/switch_button_text_color</item>
+        <item name="android:background">@color/switch_button_up_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="switch_button">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">@integer/person_info_switch_weight</item>
+    </style>
+
+    <style name="person_info_edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">@integer/person_info_edit_weight</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingLeft">@dimen/person_info_edit_padding_left</item>
+        <item name="android:paddingRight">@dimen/person_info_edit_padding_right</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">@dimen/person_info_edit_text_size</item>
+        <item name="android:textColor">@color/person_info_text_edit_color</item>
+        <item name="android:gravity">right|center_vertical</item>
+    </style>
+
 
     <style name="MusicBottomBtnStyle">
         <item name="android:layout_width">0dp</item>
@@ -91,46 +256,6 @@
         <item name="android:textColor">@color/my_history_grey_color</item>
     </style>
 
-    <style name="switch_button_item">
-        <item name="android:textSize">@dimen/switch_button_text_size</item>
-        <item name="android:textColor">@color/switch_button_text_color</item>
-        <item name="android:background">@color/switch_button_up_color</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_weight">1</item>
-    </style>
-
-    <style name="switch_button"> 
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">@integer/person_info_switch_weight</item>
-    </style>
-
-    <style name="step_button"> 
-        <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/step_btn_background</item>
-        <item name="android:onClick">myClickHandler</item>        
-        <item name="android:textSize">@dimen/step_button_text_size</item>        
-        <item name="android:textColor">@drawable/btn_color</item>                
-    </style>
-    
-    <style name="person_info_edit">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_weight">@integer/person_info_edit_weight</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:paddingLeft">@dimen/person_info_edit_padding_left</item>
-        <item name="android:paddingRight">@dimen/person_info_edit_padding_right</item>
-        <item name="android:inputType">number</item>
-        <item name="android:textSize">@dimen/person_info_edit_text_size</item>
-        <item name="android:textColor">@color/person_info_text_edit_color</item>
-        <item name="android:gravity">right|center_vertical</item>
-    </style>
-
     <style name="album_preview_icon_style">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -138,37 +263,40 @@
         <item name="android:textSize">@dimen/album_preview_icon_text_size</item>
         <item name="android:textColor">@color/album_preview_icon_text_color</item>
         <item name="android:gravity">center</item>
-		<item name="android:layout_gravity">center</item>
+        <item name="android:layout_gravity">center</item>
     </style>
-	 <style name="album_info_style">
+
+    <style name="album_info_style">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center</item>
-		<item name="android:layout_gravity">center</item>
+        <item name="android:layout_gravity">center</item>
     </style>
-	
-	 <style name="run_data_style">
+
+    <style name="run_data_style">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>        
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
-		<item name="android:layout_gravity">center</item>
-		<item name="android:textColor">@color/run_data_text_color</item>
-		<item name="android:textSize">@dimen/run_data_text_size</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/run_data_text_color</item>
+        <item name="android:textSize">@dimen/run_data_text_size</item>
     </style>
-	 <style name="run_info_style">
+
+    <style name="run_info_style">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>        
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
-		<item name="android:layout_gravity">center</item>
-		<item name="android:textColor">@color/run_info_text_color</item>
-		<item name="android:textSize">@dimen/run_info_text_size</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@color/run_info_text_color</item>
+        <item name="android:textSize">@dimen/run_info_text_size</item>
     </style>
-	 <style name="run_time_style">
+
+    <style name="run_time_style">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>        
-		<item name="android:textColor">@color/run_time_text_color</item>
-		<item name="android:textSize">@dimen/run_time_text_size</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/run_time_text_color</item>
+        <item name="android:textSize">@dimen/run_time_text_size</item>
     </style>
-		
+
 </resources>

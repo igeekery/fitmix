@@ -6,7 +6,26 @@
     <integer name="person_info_tip_weight">1</integer>
     <integer name="person_info_edit_weight">4</integer>
     <integer name="person_info_pen_weight">1</integer>
-    <integer name="person_info_space_weight">3</integer>
-    <integer name="person_info_switch_weight">2</integer>
+    <integer name="person_info_space_weight">2</integer>
+    <integer name="person_info_switch_weight">3</integer>
+    <integer name="password_length_min">6</integer>
+    <integer name="username_length_min">2</integer>
+    <integer name="default_sex">0</integer>
+    <integer name="default_age">38</integer>
+    <integer name="default_height">162</integer>
+    <integer name="default_weight">60</integer>
+    <integer name="default_unit">0</integer>
+    
+    
+    <string name="default_username">fitmix</string>
+    <string name="default_password">123456</string>
+    <string name="default_email">jerry@fitmix.com</string>
+    <string name="default_">123456</string>
+
+    <bool name="isLogout">true</bool>
+    <bool name="isDemoMode">true</bool>    
+    <bool name="default_location">true</bool>
+    <bool name="default_notification">true</bool>
+    <bool name="default_trail">true</bool>
 
 </resources>

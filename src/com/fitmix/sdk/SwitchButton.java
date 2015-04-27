@@ -2,19 +2,15 @@ package com.fitmix.sdk;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.ImageView;
-
 import android.widget.TextView;
 
-import com.fitmix.sdk.R;;
+import com.fitmix.sdk.R;
+
+;
 
 public class SwitchButton extends LinearLayout {
 	private TextView mLeft;
@@ -33,11 +29,12 @@ public class SwitchButton extends LinearLayout {
 
 	public SwitchButton(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		TypedArray a = getContext().obtainStyledAttributes(attrs, 
-				R.styleable.SwitchButton); 
-		
+		TypedArray a = getContext().obtainStyledAttributes(attrs,
+				R.styleable.SwitchButton);
+
 		sLeftText = a.getString(R.styleable.SwitchButton_textOff);
 		sRightText = a.getString(R.styleable.SwitchButton_textOn);
+		a.recycle();
 
 		init();
 	}
@@ -49,10 +46,10 @@ public class SwitchButton extends LinearLayout {
 		mLeft = (TextView) findViewById(R.id.left);
 		mRight = (TextView) findViewById(R.id.right);
 		mSwitch = (View) findViewById(R.id.switchBtn);
-		
+
 		mLeft.setText(sLeftText);
 		mRight.setText(sRightText);
-		refreshState();
+
 		mSwitch.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -62,19 +59,24 @@ public class SwitchButton extends LinearLayout {
 				refreshState();
 			}
 		});
+		refreshState();
 	}
 
 	private void refreshState() {
-		if(!mState){
-			mLeft.setBackgroundColor(getResources().getColor(R.color.switch_button_down_color));
-			mRight.setBackgroundColor(getResources().getColor(R.color.switch_button_up_color));
-		}else{
-			mLeft.setBackgroundColor(getResources().getColor(R.color.switch_button_up_color));
-			mRight.setBackgroundColor(getResources().getColor(R.color.switch_button_down_color));
+		if (!mState) {
+			mLeft.setBackgroundColor(getResources().getColor(
+					R.color.switch_button_down_color));
+			mRight.setBackgroundColor(getResources().getColor(
+					R.color.switch_button_up_color));
+		} else {
+			mLeft.setBackgroundColor(getResources().getColor(
+					R.color.switch_button_up_color));
+			mRight.setBackgroundColor(getResources().getColor(
+					R.color.switch_button_down_color));
 		}
 
 	}
-	
+
 	public void setState(boolean bCheck) {
 		mState = bCheck;
 	}

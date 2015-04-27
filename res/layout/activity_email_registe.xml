@@ -1,8 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background" >
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,162 +11,114 @@
 
         <TextView
             android:id="@+id/rsp_error"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/error_text_bg_color"
-            android:textColor="@color/error_text_fg_color"
-            android:textSize="@dimen/forgot_password_error_text_size"
-            android:visibility="gone" />
+            style="@style/TextErrorStyle" />
     </LinearLayout>
 
-    <ImageView
+    <ImageView        
+        style="@style/ImageViewLogoStyle"
+        android:layout_marginTop="@dimen/email_login_logo_top_margin"
+        android:src="@drawable/login_logo" />
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/email_login_logo_top_margin"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/login_logo"
-        android:visibility="visible" />
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true" >
+        android:layout_gravity="center_horizontal|bottom"
+        android:orientation="vertical" >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|bottom"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/email_registe_info_bottom_margin"
             android:orientation="vertical" >
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/email_registe_info_bottom_margin"
-                android:orientation="vertical" >
+                android:background="@drawable/item_info_bg"
+                android:orientation="horizontal" >
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/item_info_bg"
-                    android:orientation="horizontal" >
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/item_info_icon_weight" >
 
-                    <FrameLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="@integer/item_info_icon_weight" >
+                    <ImageView
+                        style="@style/InputIconStyle"
+                        android:src="@drawable/email_icon" />
+                </FrameLayout>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/email_icon" />
-                    </FrameLayout>
-
-                    <EditText
-                        android:id="@+id/email_registe_email"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="@integer/item_info_other_weight"
-                        android:background="@android:color/transparent"
-                        android:gravity="left|center_vertical"
-                        android:inputType="textEmailAddress"
-                        android:paddingLeft="@dimen/item_info_other_paddingLeft"
-                        android:paddingRight="@dimen/item_info_other_paddingRight"
-                        android:textColor="@color/edit_text_color"
-                        android:textSize="@dimen/item_info_edit_text_size" />
-                </LinearLayout>
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="@dimen/email_registe_info_item_v_space" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/item_info_bg"
-                    android:orientation="horizontal" >
-
-                    <FrameLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="@integer/item_info_icon_weight" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/username_icon" />
-                    </FrameLayout>
-
-                    <EditText
-                        android:id="@+id/email_registe_username"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="@integer/item_info_other_weight"
-                        android:background="@android:color/transparent"
-                        android:gravity="left|center_vertical"
-                        android:inputType="text"
-                        android:paddingLeft="@dimen/item_info_other_paddingLeft"
-                        android:paddingRight="@dimen/item_info_other_paddingRight"
-                        android:textColor="@color/edit_text_color"
-                        android:textSize="@dimen/item_info_edit_text_size" />
-                </LinearLayout>
-
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="@dimen/email_registe_info_item_v_space" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/item_info_bg"
-                    android:orientation="horizontal" >
-
-                    <FrameLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="@integer/item_info_icon_weight" >
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:src="@drawable/password_icon" />
-                    </FrameLayout>
-
-                    <EditText
-                        android:id="@+id/email_registe_password"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="@integer/item_info_other_weight"
-                        android:background="@android:color/transparent"
-                        android:gravity="left|center_vertical"
-                        android:inputType="textPassword"
-                        android:paddingLeft="@dimen/item_info_other_paddingLeft"
-                        android:paddingRight="@dimen/item_info_other_paddingRight"
-                        android:textColor="@color/edit_text_color"
-                        android:textSize="@dimen/item_info_edit_text_size" />
-                </LinearLayout>
+                <EditText
+                    android:id="@+id/email_registe_email"
+                    style="@style/InputEditTextStyle"
+                    android:inputType="textEmailAddress" />
             </LinearLayout>
+
+            <View
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/email_registe_next_bottom_margin"
-                android:orientation="vertical" >
+                android:background="@drawable/item_info_bg"
+                android:orientation="horizontal" >
 
-                <Button
-                    android:id="@+id/email_registe_next"
-                    style="@style/step_button"
-                    android:text="@string/email_registe_next" />
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/item_info_icon_weight" >
+
+                    <ImageView
+                        style="@style/InputIconStyle"
+                        android:src="@drawable/username_icon" />
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/email_registe_username"
+                    style="@style/InputEditTextStyle"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <View
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_info_bg"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="@integer/item_info_icon_weight" >
+
+                    <ImageView
+                        style="@style/InputIconStyle"
+                        android:src="@drawable/password_icon" />
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/email_registe_password"
+                    style="@style/InputEditTextStyle"
+                    android:inputType="textPassword" />
             </LinearLayout>
         </LinearLayout>
-    </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/email_registe_next_bottom_margin"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/email_registe_next"
+                style="@style/ButtonStepStyle"
+                android:text="@string/email_registe_next" />
+        </LinearLayout>
+    </LinearLayout>
 
 </FrameLayout>

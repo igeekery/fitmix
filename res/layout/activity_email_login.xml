@@ -1,8 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background" >
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,20 +11,13 @@
 
         <TextView
             android:id="@+id/rsp_error"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/error_text_bg_color"
-            android:textColor="@color/error_text_fg_color"
-            android:textSize="@dimen/forgot_password_error_text_size"
-            android:visibility="gone" />
+            style="@style/TextErrorStyle" />
     </LinearLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:id="@+id/photo"        
+        style="@style/ImageViewPhotoStyle"
         android:layout_marginTop="@dimen/email_login_logo_top_margin"
-        android:contentDescription=""
         android:src="@drawable/email_login_logo" />
 
     <LinearLayout
@@ -37,7 +29,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:layout_marginBottom="@dimen/email_login_info_bottom_margin"
             android:orientation="vertical" >
 
@@ -53,30 +45,19 @@
                     android:layout_weight="@integer/item_info_icon_weight" >
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        style="@style/InputIconStyle"
                         android:src="@drawable/username_icon" />
                 </FrameLayout>
 
                 <EditText
                     android:id="@+id/email_login_username"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="@integer/item_info_other_weight"
-                    android:background="@android:color/transparent"
-                    android:gravity="left|center_vertical"
-                    android:inputType="text"
-                    android:paddingLeft="@dimen/item_info_other_paddingLeft"
-                    android:paddingRight="@dimen/item_info_other_paddingRight"
-                    android:textColor="@color/edit_text_color"
-                    android:textSize="@dimen/item_info_edit_text_size" />
+                    style="@style/InputEditTextStyle"
+                    android:inputType="text" />
             </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="@dimen/email_login_info_item_v_space" />
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -90,25 +71,14 @@
                     android:layout_weight="@integer/item_info_icon_weight" >
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        style="@style/InputIconStyle"
                         android:src="@drawable/password_icon" />
                 </FrameLayout>
 
                 <EditText
                     android:id="@+id/email_login_password"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="@integer/item_info_other_weight"
-                    android:background="@android:color/transparent"
-                    android:gravity="left|center_vertical"
-                    android:inputType="textPassword"
-                    android:paddingLeft="@dimen/item_info_other_paddingLeft"
-                    android:paddingRight="@dimen/item_info_other_paddingRight"
-                    android:textColor="@color/edit_text_color"
-                    android:textSize="@dimen/item_info_edit_text_size" />
+                    style="@style/InputEditTextStyle"
+                    android:inputType="textPassword" />
             </LinearLayout>
         </LinearLayout>
 
@@ -121,27 +91,21 @@
 
             <Button
                 android:id="@+id/email_login_forgot_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:background="@android:color/transparent"
-                android:onClick="myClickHandler"
-                android:text="@string/email_login_forgot_password"
-                android:textColor="@drawable/btn2_color"
-                android:textSize="@dimen/email_login_forgot_password_text_size" />
+                style="@style/ButtonTextStyle"
+                android:text="@string/email_login_forgot_password" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="@dimen/email_login_bottom_margin"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/step_button_bottom_margin"
             android:orientation="vertical" >
 
             <Button
                 android:id="@+id/email_login_login"
-                style="@style/step_button"
-                android:text="@string/email_login_done" />
+                style="@style/ButtonStepStyle"
+                android:text="@string/email_login_login" />
         </LinearLayout>
     </LinearLayout>
 

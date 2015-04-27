@@ -5,45 +5,46 @@
     <color name="btn1_text_up">#FFFF901E</color>
     <color name="btn2_text_up">@android:color/white</color>
     <color name="btn2_text_down">#FF0000FF</color>
+    <color name="text_normal_fg_color">@android:color/white</color>
+    <color name="edit_hint_text_color">@android:color/white</color>
     <color name="error_text_bg_color">#FFFF0000</color>
     <color name="error_text_fg_color">@android:color/white</color>
     <color name="edit_text_color">@android:color/white</color>
-    <color name="person_info_text_tip_color">@android:color/white</color>
     <color name="person_info_text_edit_color">@android:color/white</color>
-	<color name="other_info_text_color">@android:color/white</color>
-	<color name="switch_text_color">@android:color/white</color>
-	<color name="music_bottom_btn_textcolor_on">#FFFF901E</color>
-	<color name="music_bottom_btn_textcolor_off">@android:color/white</color>
-	<color name="music_top_btn_textcolor_on">#FFFF901E</color>
-	<color name="music_top_btn_textcolor_off">@android:color/white</color>	
-	<color name="music_category_color">#FFFF901E</color>	
-	<color name="music_more_color">@android:color/white</color>	
-	<color name="music_bpm_color">@android:color/white</color>	
-	<color name="my_history_normal_text_color">@android:color/white</color>	
-	<color name="my_history_bg_color">#FF1A1A1A</color>	
-	<color name="my_history_bar_color">#FF232323</color>	
-	<color name="my_history_grey_color">#FF808080</color>	
-	<color name="switch_button_text_color">@android:color/white</color>	
-	<color name="switch_button_up_color">#FF4D4D4D</color>	
-	<color name="switch_button_down_color">#FF1A1A1A</color>	
-	<color name="album_preview_icon_text_color">#FF808080</color>	
-	<color name="album_introduce_text_color">#FF808080</color>	
-	<color name="album_name_text_color">@android:color/white</color>	
-	<color name="album_author_text_color">#FF808080</color>	
-	<color name="album_download_text_color">@android:color/white</color>	
-	<color name="album_percent_text_color">@android:color/white</color>	
-	<color name="run_data_text_color">#FFFF901E</color>	
-	<color name="run_info_text_color">#FF808080</color>	
-	<color name="run_last_record_text_color">#FF808080</color>	
-	<color name="run_distance_data_text_color">@android:color/white</color>	
-	<color name="run_distance_info_text_color">#FF808080</color>	
-	<color name="run_main_info_bg_color">#80000000</color>	
-	
-	<color name="run_album_text_color">@android:color/white</color>	
-	<color name="run_author_text_color">#FF808080</color>	
-	<color name="run_time_text_color">#FF808080</color>	
-	
-	<drawable name="progress_color">#808000FF</drawable>	
-	<drawable name="run_progress_fg">#FFFF901E</drawable>	
-	<drawable name="run_progress_bg">#FF666666</drawable>	
+    <color name="switch_button_text_color">@android:color/white</color>
+    <color name="switch_button_up_color">#FF4D4D4D</color>
+    <color name="switch_button_down_color">#FF1A1A1A</color>
+
+    
+    <color name="music_bottom_btn_textcolor_on">#FFFF901E</color>
+    <color name="music_bottom_btn_textcolor_off">@android:color/white</color>
+    <color name="music_top_btn_textcolor_on">#FFFF901E</color>
+    <color name="music_top_btn_textcolor_off">@android:color/white</color>
+    <color name="music_category_color">#FFFF901E</color>
+    <color name="music_more_color">@android:color/white</color>
+    <color name="music_bpm_color">@android:color/white</color>
+    <color name="my_history_normal_text_color">@android:color/white</color>
+    <color name="my_history_bg_color">#FF1A1A1A</color>
+    <color name="my_history_bar_color">#FF232323</color>
+    <color name="my_history_grey_color">#FF808080</color>
+    <color name="album_preview_icon_text_color">#FF808080</color>
+    <color name="album_introduce_text_color">#FF808080</color>
+    <color name="album_name_text_color">@android:color/white</color>
+    <color name="album_author_text_color">#FF808080</color>
+    <color name="album_download_text_color">@android:color/white</color>
+    <color name="album_percent_text_color">@android:color/white</color>
+    <color name="run_data_text_color">#FFFF901E</color>
+    <color name="run_info_text_color">#FF808080</color>
+    <color name="run_last_record_text_color">#FF808080</color>
+    <color name="run_distance_data_text_color">@android:color/white</color>
+    <color name="run_distance_info_text_color">#FF808080</color>
+    <color name="run_main_info_bg_color">#80000000</color>
+    <color name="run_album_text_color">@android:color/white</color>
+    <color name="run_author_text_color">#FF808080</color>
+    <color name="run_time_text_color">#FF808080</color>
+
+    <drawable name="progress_color">#808000FF</drawable>
+    <drawable name="run_progress_fg">#FFFF901E</drawable>
+    <drawable name="run_progress_bg">#FF666666</drawable>
+
 </resources>

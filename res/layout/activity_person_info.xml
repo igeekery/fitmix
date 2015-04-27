@@ -2,16 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:fitmix="http://schemas.android.com/apk/res/com.fitmix.sdk"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background" >
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/rsp_error"
+            style="@style/TextErrorStyle" />
+    </LinearLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:id="@+id/photo"
+        style="@style/ImageViewPhotoStyle"
         android:layout_marginTop="@dimen/person_info_logo_top_margin"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/person_info_logo" />
+        android:src="@drawable/login_logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,164 +28,119 @@
         android:orientation="vertical" >
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:layout_marginBottom="@dimen/person_info_bottom_margin"
             android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:background="@drawable/person_info_item_bg"
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_tip_weight"
-                    android:gravity="center"
-                    android:text="@string/personinfo_sex"
-                    android:textColor="@color/person_info_text_tip_color"
-                    android:textSize="@dimen/person_info_tip_text_size" />
+                    style="@style/InputTextHintStyle"
+                    android:text="@string/personinfo_sex" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="1dp"
                     android:layout_weight="@integer/person_info_space_weight" />
 
                 <com.fitmix.sdk.SwitchButton
                     android:id="@+id/person_info_sex"
-                    style="@style/switch_button"                    
+                    style="@style/switch_button"
                     fitmix:textOff="@string/personinfo_male"
                     fitmix:textOn="@string/personinfo_female" />
             </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="@dimen/person_info_item_space" />
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:background="@drawable/person_info_item_bg"
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_tip_weight"
-                    android:gravity="center"
-                    android:text="@string/personinfo_age"
-                    android:textColor="@color/person_info_text_tip_color"
-                    android:textSize="@dimen/person_info_tip_text_size" />
+                    style="@style/InputTextHintStyle"
+                    android:text="@string/personinfo_age" />
 
                 <EditText
                     android:id="@+id/person_info_age"
                     style="@style/person_info_edit" />
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_pen_weight"
-                    android:src="@drawable/person_info_pen" />
+                <ImageView style="@style/ImagePenStyle" />
             </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="@dimen/person_info_item_space" />
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:background="@drawable/person_info_item_bg"
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_tip_weight"
-                    android:gravity="center"
-                    android:text="@string/personinfo_height"
-                    android:textColor="@color/person_info_text_tip_color"
-                    android:textSize="@dimen/person_info_tip_text_size" />
+                    style="@style/InputTextHintStyle"
+                    android:text="@string/personinfo_height" />
 
                 <EditText
                     android:id="@+id/person_info_height"
                     style="@style/person_info_edit" />
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_pen_weight"
-                    android:src="@drawable/person_info_pen" />
+                <ImageView style="@style/ImagePenStyle" />
             </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="@dimen/person_info_item_space" />
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:background="@drawable/person_info_item_bg"
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_tip_weight"
-                    android:gravity="center"
-                    android:text="@string/personinfo_weight"
-                    android:textColor="@color/person_info_text_tip_color"
-                    android:textSize="@dimen/person_info_tip_text_size" />
+                    style="@style/InputTextHintStyle"
+                    android:text="@string/personinfo_weight" />
 
                 <EditText
                     android:id="@+id/person_info_weight"
                     style="@style/person_info_edit" />
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_pen_weight"
-                    android:src="@drawable/person_info_pen" />
+                <ImageView style="@style/ImagePenStyle" />
             </LinearLayout>
 
             <View
-                android:layout_width="1dp"
-                android:layout_height="@dimen/person_info_item_space" />
+                style="@style/ViewSpaceForVertical"
+                android:layout_height="@dimen/input_info_item_v_space" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:background="@drawable/person_info_item_bg"
                 android:orientation="horizontal" >
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_weight="@integer/person_info_tip_weight"
-                    android:gravity="center"
-                    android:text="@string/personinfo_unit"
-                    android:textColor="@color/person_info_text_tip_color"
-                    android:textSize="@dimen/person_info_tip_text_size" />
+                    style="@style/InputTextHintStyle"
+                    android:text="@string/personinfo_unit" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="1dp"
                     android:layout_weight="@integer/person_info_space_weight" />
 
                 <com.fitmix.sdk.SwitchButton
@@ -189,16 +152,16 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginBottom="@dimen/person_info_next_bottom_margin"
             android:orientation="vertical" >
 
             <Button
                 android:id="@+id/person_info_next"
-                style="@style/step_button"
-                android:text="@string/personinfo_next"
-                />
+                style="@style/ButtonStepStyle"
+                android:text="@string/personinfo_next" />
         </LinearLayout>
     </LinearLayout>
 
