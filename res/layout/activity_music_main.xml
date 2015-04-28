@@ -12,7 +12,6 @@
             android:layout_width="@dimen/music_top_bar_width"
             android:layout_height="@dimen/music_top_bar_height"
             android:layout_gravity="center"
-            android:background="@android:color/transparent"
             android:orientation="horizontal" >
 
             <ToggleButton
@@ -25,8 +24,9 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content"                
                 android:layout_gravity="center_vertical"
+                android:contentDescription="@string/image_description"
                 android:src="@drawable/music_top_bar_space" />
 
             <ToggleButton
@@ -39,6 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
+                android:contentDescription="@string/image_description"
                 android:src="@drawable/music_top_bar_space" />
 
             <ToggleButton

@@ -6,13 +6,10 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,8 +19,14 @@ public class MusicCategory extends LinearLayout {
 	private ViewGroup mAlbumStand;
 	private String[] mImageArray = null;
 	private int[] mImageIdArray = null;
+	private int[] mBPM = null;
 	private boolean bExpand = false;
 
+	public static final int MODE_EXPAND = 0;
+	public static final int MODE_NEXT_GROUP = 1;
+	private int mMode = MODE_NEXT_GROUP;
+	private int mCurrentGroup = 0;
+	
 	public MusicCategory(Context context) {
 		super(context);
 		init();
@@ -54,28 +57,26 @@ public class MusicCategory extends LinearLayout {
 	}
 
 	public void setCategoryIcon(int resId) {
-
-		if (resId == 0)
-			return;
-		textCategory.setCompoundDrawablePadding(5);
-		textCategory.setCompoundDrawablesWithIntrinsicBounds(getResources()
-				.getDrawable(resId), null, null, null);
-	}
-
-	public void setCategoryIcon(Bitmap bmp) {
-		if (bmp == null)
-			return;
-		Drawable drawable = new BitmapDrawable(bmp);
+		Drawable drawable = null;
+		if (resId != 0)drawable = getResources().getDrawable(resId);
 		textCategory.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);
 	}
 
+	@SuppressWarnings("deprecation")
+	public void setCategoryIcon(Bitmap bmp) {
+		Drawable drawable = null;
+		if (bmp != null)drawable = new BitmapDrawable(bmp);
+		textCategory.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);
+	}
+
+	@SuppressWarnings("deprecation")
 	public void setCategoryIcon(String sFilename) {
+		Drawable drawable = null;
 		textCategory.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
-		if (sFilename == null || sFilename.isEmpty())
-			return;
-		Bitmap bmp = BitmapFactory.decodeFile(sFilename);
-		if(bmp == null)return;
-		Drawable drawable = new BitmapDrawable(bmp);
+		if (sFilename != null && (!sFilename.isEmpty())){
+			Bitmap bmp = BitmapFactory.decodeFile(MyConfig.getDataPath() + sFilename);
+			drawable = new BitmapDrawable(bmp);			
+		}
 		textCategory.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);
 	}
 
@@ -93,7 +94,35 @@ public class MusicCategory extends LinearLayout {
 		mImageIdArray = null;
 		mAlbumStand.removeAllViews();
 	}
+	private void addAllImagesByFilename(){
+		int iCount = mImageArray.length;		
+		String sFile1, sFile2, sFile3;
+		int bpm1, bpm2, bpm3;
+		int iLoop = iCount / 3;
+		int iEndIndex = iCount % 3;
+		if (iEndIndex != 0)
+			iLoop++;
+		for (int i = 0, iIndex = 0; i < iLoop; i++, iIndex += 3) {
+			sFile1 = mImageArray[iIndex];
+			bpm1 = mBPM[iIndex];
+			sFile2 = null;
+			sFile3 = null;
+			bpm2 = 0;
+			bpm3 = 0;
+			if ((iIndex + 1) < iCount) {
+				sFile2 = mImageArray[iIndex + 1];
+				bpm2 = mBPM[iIndex + 1];
+			}
+			if ((iIndex + 2) < iCount) {
+				sFile3 = mImageArray[iIndex + 2];
+				bpm3 = mBPM[iIndex + 2];
 
+			}
+			addNewRow(sFile1, bpm1, sFile2, bpm2, sFile3, bpm3);
+		}
+		refreshImages();
+		
+	}
 	public void setImageArray(String[] array, int[] bpm) {
 		clearImageArray();
 		if (array == null || bpm == null)
@@ -104,60 +133,38 @@ public class MusicCategory extends LinearLayout {
 			return;
 		if (bpm.length != iCount)
 			return;
-
-		String sFile1, sFile2, sFile3;
-		int bpm1, bpm2, bpm3;
-		int iLoop = iCount / 3;
-		int iEndIndex = iCount % 3;
-		if (iEndIndex != 0)
-			iLoop++;
-		for (int i = 0, iIndex = 0; i < iLoop; i++, iIndex += 3) {
-			sFile1 = array[iIndex];
-			bpm1 = bpm[iIndex];
-			sFile2 = null;
-			sFile3 = null;
-			bpm2 = 0;
-			bpm3 = 0;
-			if (iIndex + 1 < iCount) {
-				sFile2 = array[iIndex + 1];
-				bpm2 = bpm[iIndex + 1];
-
-			}
-			if (iIndex + 2 < iCount) {
-				sFile3 = array[iIndex + 2];
-				bpm3 = bpm[iIndex + 2];
-
-			}
-			addNewRow(sFile1, bpm1, sFile2, bpm2, sFile3, bpm3);
-		}
-		refreshImages();
+		mBPM = bpm.clone();
+			addAllImagesByFilename();
 	}
-
-	public void setImageArray(int[] array) {
-		clearImageArray();
-		if (array != null)
-			mImageIdArray = array.clone();
-		int iCount = array.length;
-		if (iCount <= 0)
-			return;
+	private void addAllImagesByID(){
+		int iCount = mImageIdArray.length;		
 		int id1, id2, id3;
 		int iLoop = iCount / 3;
 		int iEndIndex = iCount % 3;
 		if (iEndIndex != 0)
 			iLoop++;
 		for (int i = 0, iIndex = 0; i < iLoop; i++, iIndex += 3) {
-			id1 = array[iIndex];
+			id1 = mImageIdArray[iIndex];
 			id2 = 0;
 			id3 = 0;
 			if (iIndex + 1 < iCount)
-				id2 = array[iIndex + 1];
+				id2 = mImageIdArray[iIndex + 1];
 			if (iIndex + 2 < iCount)
-				id3 = array[iIndex + 2];
+				id3 = mImageIdArray[iIndex + 2];
 			addNewRow(id1, id2, id3);
 		}
-		refreshImages();
+		refreshImages();		
 	}
-
+	
+	public void setImageArray(int[] array) {
+		clearImageArray();
+		if (array != null)
+			mImageIdArray = array.clone();
+		int iCount = mImageIdArray.length;
+		if (iCount <= 0)
+			return;
+		addAllImagesByID();
+	}
 	private void addNewRow(int id1, int id2, int id3) {
 		LinearLayout.LayoutParams lpRow = new LinearLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
@@ -211,8 +218,7 @@ public class MusicCategory extends LinearLayout {
 
 		mAlbumStand.addView(layoutRow, lpRow);
 	}
-
-	private void refreshImages() {
+	private void refreshByExpandMode(){
 		btnMore.setText(bExpand ? R.string.music_close : R.string.music_more);
 		int iCount = mAlbumStand.getChildCount();
 		for (int i = 0; i < iCount; i++) {
@@ -221,6 +227,38 @@ public class MusicCategory extends LinearLayout {
 			mAlbumStand.getChildAt(i).setVisibility(
 					bExpand ? View.VISIBLE : View.GONE);
 		}
-
+	}
+	private void refreshByNextGroupMode(){
+		int iCount = mAlbumStand.getChildCount();
+		int start = mCurrentGroup * 2;
+		int end = start + 2;
+		boolean bShow  = false;
+		for (int i = 0; i < iCount; i++) {
+			bShow = false;
+			if((i >= start) && (i < end))bShow = true;
+			mAlbumStand.getChildAt(i).setVisibility(
+					bShow ? View.VISIBLE : View.GONE);
+		}		
+		mCurrentGroup++;
+		int iTotalGroup = iCount / 2;
+		if((iCount % 2) != 0)iTotalGroup++;
+		if(mCurrentGroup >= iTotalGroup)mCurrentGroup = 0;
+	}
+	private void refreshImages() {
+		switch(mMode){
+		case MODE_EXPAND:
+			refreshByExpandMode();
+			break;
+		case MODE_NEXT_GROUP:
+		default:
+			refreshByNextGroupMode();
+			break;
+		}
+	}
+	public void setMode(int mode){
+		mMode = mode;
+	}
+	public int getMode(){
+		return mMode;
 	}
 }

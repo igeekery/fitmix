@@ -6,7 +6,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -37,40 +36,47 @@ public class MusicCorver extends FrameLayout {
 		mCorver = (ImageView) findViewById(R.id.corver);
 		mBpm = (TextView) findViewById(R.id.bpm);
 		mCorver.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-				getContext().startActivity(new Intent(getContext(), AlbumActivity.class));
-				
+				getContext().startActivity(
+						new Intent(getContext(), AlbumActivity.class));
+
 			}
 		});
 	}
-	private void clearImage(){
-		this.setVisibility(View.INVISIBLE);
+
+	private void clearImage() {
+		setVisibility(View.INVISIBLE);
 		iBpm = 0;
 	}
+
 	public void setImageByResourceId(int resId) {
-		if (resId == 0){
+		if (resId == 0) {
 			clearImage();
 			return;
-		}			
+		}
 		mCorver.setImageResource(resId);
 	}
 
 	public void setImageByFilename(String sFilename) {
-		if ((sFilename == null) || sFilename.isEmpty()){
+		if ((sFilename == null) || sFilename.isEmpty()) {
 			clearImage();
 			return;
 		}
-			
-		Bitmap bm = BitmapFactory.decodeFile(sFilename);
-		if(bm == null)return;
+
+		Bitmap bm = BitmapFactory.decodeFile(MyConfig.getDataPath() + sFilename);
+		if (bm == null) {
+			clearImage();
+			return;
+		}
+
 		mCorver.setImageBitmap(bm);
 	}
 
 	public void setImageByUri(Uri image) {
-		if (image == null){
+		if (image == null) {
 			clearImage();
 			return;
 		}

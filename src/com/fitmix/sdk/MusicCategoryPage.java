@@ -4,13 +4,11 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.LinearLayout.LayoutParams;
 
 public class MusicCategoryPage extends LinearLayout {
 	private ViewGroup mCategoryGroup;
+	private int mMode = MusicCategory.MODE_NEXT_GROUP;
 
 	public MusicCategoryPage(Context context) {
 		super(context);
@@ -38,7 +36,7 @@ public class MusicCategoryPage extends LinearLayout {
 		category.setCategoryIcon(icon);
 		category.setCategoryText(title);
 		category.setImageArray(array);
-
+		category.setMode(mMode);
 		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 
@@ -46,12 +44,14 @@ public class MusicCategoryPage extends LinearLayout {
 
 		mCategoryGroup.addView(category, lp);
 	}
-	public void AddNewCategory(String icon, String title, String[] array, int []bpm) {
+
+	public void AddNewCategory(String icon, String title, String[] array,
+			int[] bpm) {
 		MusicCategory category = new MusicCategory(getContext());
 		category.setCategoryIcon(icon);
 		category.setCategoryText(title);
 		category.setImageArray(array, bpm);
-
+		category.setMode(mMode);
 		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
 				LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 
@@ -60,4 +60,11 @@ public class MusicCategoryPage extends LinearLayout {
 		mCategoryGroup.addView(category, lp);
 	}
 
+	public void setMode(int mode) {
+		mMode = mode;
+	}
+
+	public int getMode() {
+		return mMode;
+	}
 }

@@ -13,9 +13,7 @@
     <color name="person_info_text_edit_color">@android:color/white</color>
     <color name="switch_button_text_color">@android:color/white</color>
     <color name="switch_button_up_color">#FF4D4D4D</color>
-    <color name="switch_button_down_color">#FF1A1A1A</color>
-
-    
+    <color name="switch_button_down_color">#FF1A1A1A</color>    
     <color name="music_bottom_btn_textcolor_on">#FFFF901E</color>
     <color name="music_bottom_btn_textcolor_off">@android:color/white</color>
     <color name="music_top_btn_textcolor_on">#FFFF901E</color>
@@ -23,6 +21,7 @@
     <color name="music_category_color">#FFFF901E</color>
     <color name="music_more_color">@android:color/white</color>
     <color name="music_bpm_color">@android:color/white</color>
+    
     <color name="my_history_normal_text_color">@android:color/white</color>
     <color name="my_history_bg_color">#FF1A1A1A</color>
     <color name="my_history_bar_color">#FF232323</color>

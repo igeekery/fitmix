@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">fitmix</string>
+	<string name="image_description">image</string>
     <string name="try_out">Or try out now!</string>
     <string name="login">Login</string>
     <string name="registe">Registe</string>

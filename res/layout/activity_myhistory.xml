@@ -1,7 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +18,7 @@
                 android:id="@+id/setting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/image_description"
                 android:layout_marginRight="@dimen/my_history_setting_margin_right"
                 android:layout_marginTop="@dimen/my_history_setting_margin_top"
                 android:src="@drawable/btn_settings" />
@@ -33,9 +33,11 @@
                 android:id="@+id/photo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/image_description"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/my_history_photo_margin_left"
+                android:layout_marginRight="@dimen/my_history_photo_margin_right"
                 android:src="@drawable/my_photo" />
 
             <TextView
@@ -43,7 +45,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/my_history_photo_text_gap"
                 android:layout_toRightOf="@+id/photo"
                 android:text="@string/reg_state_unregisted"
                 android:textColor="@color/my_history_grey_color"
@@ -64,7 +65,7 @@
         </RelativeLayout>
 
         <View
-            android:layout_width="match_parent"
+            style="@style/ViewSpaceForVertical"
             android:layout_height="@dimen/my_history_v_spacebar_1" />
 
         <LinearLayout
@@ -74,11 +75,8 @@
             android:gravity="center" >
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/my_last_record"
-                android:textColor="@color/my_history_normal_text_color"
-                android:textSize="@dimen/my_history_last_record_text_size" />
+                style="@style/my_history_normal_text_style"
+                android:text="@string/my_last_record" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,52 +84,36 @@
             android:layout_height="@dimen/my_history_last_record_height" >
 
             <TextView
-                style="@style/my_history_normalText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/my_history_bar_color"
+                style="@style/my_history_topic_style"
                 android:text="@string/record_time" />
 
             <View
-                android:layout_width="@dimen/my_history_h_spacebar"
-                android:layout_height="match_parent" />
+                style="@style/ViewSpaceForHorizontal"
+                android:layout_height="@dimen/my_history_h_spacebar" />
 
             <TextView
-                style="@style/my_history_normalText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/my_history_bar_color"
+                style="@style/my_history_topic_style"
                 android:text="@string/record_distance" />
 
             <View
-                android:layout_width="@dimen/my_history_h_spacebar"
-                android:layout_height="match_parent" />
+                style="@style/ViewSpaceForHorizontal"
+                android:layout_height="@dimen/my_history_h_spacebar" />
 
             <TextView
-                style="@style/my_history_normalText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/my_history_bar_color"
+                style="@style/my_history_topic_style"
                 android:text="@string/record_speed" />
 
             <View
-                android:layout_width="@dimen/my_history_h_spacebar"
-                android:layout_height="match_parent" />
+                style="@style/ViewSpaceForHorizontal"
+                android:layout_height="@dimen/my_history_h_spacebar" />
 
             <TextView
-                style="@style/my_history_normalText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/my_history_bar_color"
+                style="@style/my_history_topic_style"
                 android:text="@string/record_bpm" />
         </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
+            style="@style/ViewSpaceForVertical"
             android:layout_height="@dimen/my_history_v_spacebar_2" />
 
         <LinearLayout
@@ -141,35 +123,23 @@
 
             <TextView
                 android:id="@+id/record_time"
-                style="@style/my_history_normalText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                style="@style/my_history_data_style" />
 
             <TextView
                 android:id="@+id/record_distance"
-                style="@style/my_history_normalText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                style="@style/my_history_data_style" />
 
             <TextView
                 android:id="@+id/record_speed"
-                style="@style/my_history_normalText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                style="@style/my_history_data_style" />
 
             <TextView
                 android:id="@+id/record_bpm"
-                style="@style/my_history_normalText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                style="@style/my_history_data_style" />
         </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
+            style="@style/ViewSpaceForVertical"
             android:layout_height="@dimen/my_history_v_spacebar_3" />
 
         <LinearLayout
@@ -180,102 +150,94 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_gravity="center"
                 android:layout_marginLeft="@dimen/my_history_photo_margin_left"
+                android:layout_marginRight="@dimen/my_history_photo_margin_right"
+                android:contentDescription="@string/image_description"
                 android:src="@drawable/my_history" />
 
             <TextView
-                android:id="@+id/record_time"
-                style="@style/my_history_normalText"
+                style="@style/my_history_normal_text_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
                 android:text="@string/record_history" />
         </LinearLayout>
 
         <View
-            android:layout_width="match_parent"
+            style="@style/ViewSpaceForVertical"
             android:layout_height="@dimen/my_history_v_spacebar_4" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/my_history_music_bar_height"
             android:background="@color/my_history_bar_color"
-            android:gravity="center_vertical" >
+            android:baselineAligned="false"
+            android:gravity="center" >
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/image_description"
                     android:src="@drawable/history_music" />
 
                 <TextView
                     style="@style/my_history_text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/history_my_music" />
 
                 <TextView
                     android:id="@+id/my_music"
-                    style="@style/my_history_text3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    style="@style/my_history_text3" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/image_description"
                     android:src="@drawable/history_download" />
 
                 <TextView
                     style="@style/my_history_text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/history_downloading" />
 
                 <TextView
-                    android:id="@+id/my_music"
-                    style="@style/my_history_text3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:id="@+id/my_download"
+                    style="@style/my_history_text3" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/image_description"
                     android:src="@drawable/history_favorite" />
 
                 <TextView
                     style="@style/my_history_text2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/history_my_favorite" />
 
                 <TextView
-                    android:id="@+id/my_music"
-                    style="@style/my_history_text3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:id="@+id/my_favorite"
+                    style="@style/my_history_text3" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
